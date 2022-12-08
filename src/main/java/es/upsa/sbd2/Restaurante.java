@@ -14,12 +14,12 @@ public class Restaurante {
     private String numRegistro;
     private String codigo;
     private String tipo;
-    private String especialidades;
+    private String categoria; //FALTA UNA ENUM DE CATEGORIA
     private String clase;
     private String nombre;
     private String direccion;
     private String cp;
-    private String provincia;
+    private Provincia provincia;
     private String municipio;
     private String localidad;
     private String nucleo;
