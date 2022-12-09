@@ -21,7 +21,7 @@ public class Restaurante {
     private String nombre;
     private String direccion;
     private String cp;
-    private Provincia provincia;
+    private String provincia;
     private String municipio;
     private String localidad;
     private String nucleo;
@@ -33,7 +33,7 @@ public class Restaurante {
     private String calidadQ;
     private String centralReservas;
     private String posadaReal;
-    private int plazas;
+    private String plazas; //es un int y en el CsvRestaurante hay que hacer la conversion pero quiero aislar un problema
     private String longitud;
     private String latitud;
     private String accesible;

@@ -5,6 +5,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
 
     @Override
     public Restaurante parse(String csvLine) {
+
         String[] tokens = csvLine.split(";", 27);
 
         return Restaurante.builder()
@@ -18,7 +19,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withNombre(tokens[7])
                 .withDireccion(tokens[8])
                 .withCp(tokens[9])
-                .withProvincia(Provincia.valueOf(tokens[10]))
+                .withProvincia(tokens[10])
                 .withMunicipio(tokens[11])
                 .withLocalidad(tokens[12])
                 .withNucleo(tokens[13])
@@ -30,7 +31,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withCalidadQ(tokens[19])
                 .withCentralReservas(tokens[20])
                 .withPosadaReal(tokens[21])
-                .withPlazas(Integer.parseInt(tokens[22]))
+                .withPlazas(tokens[22])
                 .withLongitud(tokens[23])
                 .withLatitud(tokens[24])
                 .withAccesible(tokens[25])
