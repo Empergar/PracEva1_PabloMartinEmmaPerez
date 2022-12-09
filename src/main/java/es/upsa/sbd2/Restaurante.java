@@ -8,13 +8,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder(setterPrefix = "with")
+@Builder(setterPrefix = "with",
+         buildMethodName = "newBuilder")
 public class Restaurante {
-    private String establecimiento = "Restaurantes"; //Lo dejo asi para acordarme
+    private String establecimiento; //Lo dejo asi para acordarme
     private String numRegistro;
     private String codigo;
     private String tipo;
     private String categoria; //FALTA UNA ENUM DE CATEGORIA
+    private String especialidades;
     private String clase;
     private String nombre;
     private String direccion;
