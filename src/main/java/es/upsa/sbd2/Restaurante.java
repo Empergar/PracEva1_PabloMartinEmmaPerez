@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
 public class Restaurante {
-    private String establecimiento;
+    private String establecimiento = "Restaurantes"; //NO SE SI ESTO SE PONE ASÍ
     private String numRegistro;
     private String codigo;
     private String tipo;
