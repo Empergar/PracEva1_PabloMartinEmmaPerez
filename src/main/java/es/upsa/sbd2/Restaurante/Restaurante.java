@@ -1,5 +1,6 @@
 package es.upsa.sbd2.Restaurante;
 
+import es.upsa.sbd2.Enumeraciones.Provincia;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +22,7 @@ public class Restaurante {
     private String nombre;
     private String direccion;
     private String cp;
-    private String provincia;
+    private Provincia provincia;
     private String municipio;
     private String localidad;
     private String nucleo;

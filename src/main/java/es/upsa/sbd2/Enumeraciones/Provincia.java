@@ -1,5 +1,13 @@
 package es.upsa.sbd2.Enumeraciones;
 
 public enum Provincia {
-    Ávila, Burgos, León, Palencia, Salamanca, Segovia, Soria, Valladolid, Zamora
+    AVILA("Ávila"), BURGOS("Burgos"), LEON("León"),
+    PALENCIA("Palencia"), SALAMANCA("Salamanca"), SEGOVIA("Segovia"),
+    SORIA("Soria"), VALLADOLID("Valladolid"), ZAMORA("Zamora");
+
+    private final String provincia;
+
+    Provincia(String provincia) {
+        this.provincia = provincia;
+    }
 }
