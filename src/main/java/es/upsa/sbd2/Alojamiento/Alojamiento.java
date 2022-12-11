@@ -1,4 +1,4 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.Alojamiento;
 
 public class Alojamiento {
     private String numRegistro;

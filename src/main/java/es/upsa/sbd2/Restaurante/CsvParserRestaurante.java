@@ -1,4 +1,7 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.Restaurante;
+
+import es.upsa.sbd2.CsvParser;
+import es.upsa.sbd2.Restaurante.Restaurante;
 
 public class CsvParserRestaurante implements CsvParser<Restaurante> {
 

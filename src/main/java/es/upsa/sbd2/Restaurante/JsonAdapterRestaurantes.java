@@ -1,5 +1,7 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.Restaurante;
 
+import es.upsa.sbd2.JsonAdapter;
+import es.upsa.sbd2.Restaurante.Restaurante;
 import jakarta.json.Json;
 import jakarta.json.JsonValue;
 
