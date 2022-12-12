@@ -33,9 +33,10 @@ public class JsonAdapterRestaurantes implements JsonAdapter<Restaurante> {
                                          .build())
                 .add("contacto",Json.createObjectBuilder()
                         .add("telefono", Json.createObjectBuilder()
-                                .add("tlf1", data.getTlf1())
-                                .add("tlf2", data.getTlf2())
-                                .add("tlf3", data.getTlf3()))
+                                .add("telefono1", data.getTlf1())
+                                .add("telefono2", data.getTlf2())
+                                .add("telefono3", data.getTlf3())
+                                .build())
                         .add("email", data.getEmail())
                         .add("web", data.getWeb()))
                 .build();

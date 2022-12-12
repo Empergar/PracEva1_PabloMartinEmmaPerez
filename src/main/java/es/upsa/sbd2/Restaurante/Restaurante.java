@@ -29,7 +29,9 @@ public class Restaurante {
     private String municipio;
     private String localidad;
     private String nucleo;
-    private List<String> telefonos;
+    private String tlf1;
+    private String tlf2;
+    private String tlf3;
     private String email;
     private String web;
     private String calidadQ;

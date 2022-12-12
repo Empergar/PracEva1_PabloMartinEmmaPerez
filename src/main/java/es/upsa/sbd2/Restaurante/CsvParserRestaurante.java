@@ -36,7 +36,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withCalidadQ(tokens[19])
                 .withCentralReservas(tokens[20])
                 .withPosadaReal(tokens[21])
-                .withPlazas(tokens[22])
+                .withPlazas(Integer.parseInt(tokens[22]))
                 .withLongitud(tokens[23])
                 .withLatitud(tokens[24])
                 .withAccesible(tokens[25])
