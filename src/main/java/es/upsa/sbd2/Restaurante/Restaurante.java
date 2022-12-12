@@ -36,7 +36,7 @@ public class Restaurante {
     private String calidadQ;
     private String centralReservas;
     private String posadaReal;
-    private int plazas;
+    private Integer plazas;
     private String longitud;
     private String latitud;
     private String accesible;

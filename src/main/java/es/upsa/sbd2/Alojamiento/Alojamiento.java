@@ -32,7 +32,7 @@ public class Alojamiento {
     private Boolean calidadQ;
     private Boolean centralReservas;
     private Boolean posadaReal;
-    private int plazas;
+    private Integer plazas;
     private String longitud;
     private String latitud;
     private Boolean accMinusvalidos;
