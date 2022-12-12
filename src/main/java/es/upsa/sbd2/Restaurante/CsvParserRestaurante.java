@@ -18,7 +18,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withNumRegistro(tokens[1])
                 .withCodigo(tokens[2])
                 .withTipo(tokens[3])
-                .withCategoria(CategoriaRestaurante.valueOf((tokens[4])))
+                .withCategoria(CategoriaRestaurante.getCategoriaRestaurante((tokens[4])))
                 .withClase(tokens[5])
                 .withEspecialidades(tokens[6])
                 .withNombre(tokens[7])

@@ -14,13 +14,13 @@ public enum CategoriaRestaurante {
         this.categoriaRestaurante = categoriaRestaurante;
     }
 
-    public static String getCategoriaRestaurante(String categoria)
+    public static CategoriaRestaurante getCategoriaRestaurante(String categoria)
     {
         for (CategoriaRestaurante cat: CategoriaRestaurante.values())
         {
             if (cat.categoriaRestaurante.equals(categoria))
             {
-                return cat.categoriaRestaurante;
+                return cat;
             }
         }
         throw new DataNotValidException();
