@@ -29,7 +29,7 @@ public class Alojamiento {
     private List<String> telefonos;
     private String email;
     private String web;
-    private String calidad;
+    private String calidadQ;
     private String centralReservas;
     private String posadaReal;
     private int plazas;

@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,9 +28,8 @@ public class Restaurante {
     private String municipio;
     private String localidad;
     private String nucleo;
-    private String tlf1;
-    private String tlf2;
-    private String tlf3;
+    //Te he cambiado lo de telefonos porque hablando con alejandro he visto que es una lista en el JSON
+    private List<String> telefonos;
     private String email;
     private String web;
     private String calidadQ;
