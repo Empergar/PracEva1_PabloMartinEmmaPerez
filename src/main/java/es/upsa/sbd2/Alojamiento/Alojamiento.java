@@ -37,4 +37,5 @@ public class Alojamiento {
     private String latitud;
     private String accMinusvalidos;
     private String posicion;
+    //yepA
 }
