@@ -5,9 +5,9 @@ public enum CategoriaAlojamiento {
     TERCERA("3ª - 3 Estrellas"), CUARTA("4ª - 4 Estrellas"),
     QUINTA("5ª - 5 Estrellas");
 
-    private final String CategoriaAlojamiento;
+    private final String categoriaAlojamiento;
 
     CategoriaAlojamiento(String categoriaAlojamiento) {
-        this.CategoriaAlojamiento = categoriaAlojamiento;
+        this.categoriaAlojamiento = categoriaAlojamiento;
     }
 }

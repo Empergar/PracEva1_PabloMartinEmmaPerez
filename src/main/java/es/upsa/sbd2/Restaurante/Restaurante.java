@@ -12,8 +12,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder(setterPrefix = "with",
-         buildMethodName = "newBuilder")
+@Builder(setterPrefix = "with")
 public class Restaurante {
     private String establecimiento;
     private String numRegistro;
