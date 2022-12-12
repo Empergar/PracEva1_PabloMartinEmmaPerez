@@ -29,13 +29,12 @@ public class Alojamiento {
     private List<String> telefonos;
     private String email;
     private String web;
-    private String calidadQ;
-    private String centralReservas;
-    private String posadaReal;
+    private Boolean calidadQ;
+    private Boolean centralReservas;
+    private Boolean posadaReal;
     private int plazas;
     private String longitud;
     private String latitud;
-    private String accMinusvalidos;
+    private Boolean accMinusvalidos;
     private String posicion;
-    //yepA
 }

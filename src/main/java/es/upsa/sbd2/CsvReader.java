@@ -10,10 +10,10 @@ import java.util.List;
 
 public class CsvReader {
 
-    public <T> List<T> read(File csvFile, CsvParser<T> csvParser) throws IOException {
+    public <T> List<T> read(File csvFile, CsvParser<T> csvParser, String charset) throws IOException {
 
         List<T> list = new ArrayList<>();
-        try (FileReader fr = new FileReader(csvFile, Charset.forName("UTF-8"));
+        try (FileReader fr = new FileReader(csvFile, Charset.forName(charset));
              BufferedReader br = new BufferedReader(fr)){
 
             String csvLine = br.readLine();

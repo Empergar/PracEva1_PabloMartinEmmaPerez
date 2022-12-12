@@ -24,7 +24,7 @@ public class Main {
         JsonAdapter<Restaurante> jsonAdapter = new JsonAdapterRestaurantes();
 
         CsvReader csvReader = new CsvReader();
-        List<Restaurante> restaurantes = csvReader.read(csvFile, csvParser);
+        List<Restaurante> restaurantes = csvReader.read(csvFile, csvParser, "UTF-8");
         JsonFile<Restaurante> jsnFile = new JsonFile<>( jsonAdapter );
         jsnFile.write(jsonFile, restaurantes);
     }
