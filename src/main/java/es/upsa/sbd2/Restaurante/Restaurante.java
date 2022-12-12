@@ -2,10 +2,7 @@ package es.upsa.sbd2.Restaurante;
 
 import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
 import es.upsa.sbd2.Enumeraciones.Provincia;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -14,18 +11,25 @@ import java.util.List;
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
 public class Restaurante {
+    @NonNull
     private String establecimiento;
+    @NonNull
     private String numRegistro;
     private String codigo;
     private String tipo;
-    private CategoriaRestaurante categoria; //FALTA UNA ENUM DE CATEGORIA
+    private CategoriaRestaurante categoria;
     private String especialidades;
     private String clase;
+    @NonNull
     private String nombre;
     private String direccion;
+    @NonNull
     private String cp;
+    @NonNull
     private Provincia provincia;
+    @NonNull
     private String municipio;
+    @NonNull
     private String localidad;
     private String nucleo;
     private String tlf1;
