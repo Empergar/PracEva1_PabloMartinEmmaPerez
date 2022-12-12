@@ -1,6 +1,8 @@
 package es.upsa.sbd2.Restaurante;
 
 import es.upsa.sbd2.CsvParser;
+import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
+import es.upsa.sbd2.Enumeraciones.Provincia;
 import es.upsa.sbd2.Restaurante.Restaurante;
 
 public class CsvParserRestaurante implements CsvParser<Restaurante> {
@@ -16,13 +18,13 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withNumRegistro(tokens[1])
                 .withCodigo(tokens[2])
                 .withTipo(tokens[3])
-                .withCategoria(tokens[4])
+                .withCategoria(CategoriaRestaurante.valueOf(tokens[4]))
                 .withClase(tokens[5])
                 .withEspecialidades(tokens[6])
                 .withNombre(tokens[7])
                 .withDireccion(tokens[8])
                 .withCp(tokens[9])
-                .withProvincia(tokens[10])
+                .withProvincia(Provincia.valueOf(tokens[10]))
                 .withMunicipio(tokens[11])
                 .withLocalidad(tokens[12])
                 .withNucleo(tokens[13])

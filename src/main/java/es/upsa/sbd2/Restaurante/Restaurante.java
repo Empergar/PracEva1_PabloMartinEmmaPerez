@@ -1,5 +1,6 @@
 package es.upsa.sbd2.Restaurante;
 
+import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
 import es.upsa.sbd2.Enumeraciones.Provincia;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,11 +15,11 @@ import java.util.List;
 @Builder(setterPrefix = "with",
          buildMethodName = "newBuilder")
 public class Restaurante {
-    private String establecimiento; //Lo dejo asi para acordarme
+    private String establecimiento;
     private String numRegistro;
     private String codigo;
     private String tipo;
-    private String categoria; //FALTA UNA ENUM DE CATEGORIA
+    private CategoriaRestaurante categoria; //FALTA UNA ENUM DE CATEGORIA
     private String especialidades;
     private String clase;
     private String nombre;
@@ -28,14 +29,13 @@ public class Restaurante {
     private String municipio;
     private String localidad;
     private String nucleo;
-    //Te he cambiado lo de telefonos porque hablando con alejandro he visto que es una lista en el JSON
     private List<String> telefonos;
     private String email;
     private String web;
     private String calidadQ;
     private String centralReservas;
     private String posadaReal;
-    private String plazas; //es un int y en el CsvRestaurante hay que hacer la conversion pero quiero aislar un problema
+    private int plazas;
     private String longitud;
     private String latitud;
     private String accesible;
