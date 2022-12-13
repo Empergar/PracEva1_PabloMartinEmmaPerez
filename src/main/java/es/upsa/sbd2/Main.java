@@ -18,13 +18,17 @@ public class Main {
         createRestaurantesJson(restaurantesjsonFile, csvFile);
     }
 
-    //Pimera parte del ejercicio
+    //Obtener fichero Json de restaurantes
     public static void createRestaurantesJson(File jsonFile, File csvFile) throws IOException {
+        //Creamos CsvParser y su adapter correspondiente
         CsvParserRestaurante csvParser = new CsvParserRestaurante();
         JsonAdapter<Restaurante> jsonAdapter = new JsonAdapterRestaurantes();
 
+        //Creamos el CsvReader genérico
         CsvReader csvReader = new CsvReader();
+        //Obtenemos la lista de restaurantes a partir del csv con su CsvReader
         List<Restaurante> restaurantes = csvReader.read(csvFile, csvParser, "UTF-8");
+        //Convertimos la lista obtenida a un fichero .json
         JsonFile<Restaurante> jsnFile = new JsonFile<>( jsonAdapter );
         jsnFile.write(jsonFile, restaurantes);
     }

@@ -5,9 +5,8 @@ import es.upsa.sbd2.Restaurante.Restaurante;
 import jakarta.json.Json;
 import jakarta.json.JsonValue;
 
-public class JsonAdapterRestaurantes implements JsonAdapter<Restaurante> {
-
-
+public class JsonAdapterRestaurantes implements JsonAdapter<Restaurante>
+{
     @Override
     public JsonValue toJson(Restaurante data) {
 

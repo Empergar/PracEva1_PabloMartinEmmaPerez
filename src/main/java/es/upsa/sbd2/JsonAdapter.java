@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface JsonAdapter <T> {
 
-    public JsonValue toJson(T data);
+    JsonValue toJson(T data);
 
-    public default JsonArray toJsonArray(List<T> data)
+    default JsonArray toJsonArray(List<T> data)
     {
         JsonArrayBuilder jab = Json.createArrayBuilder();
         data.forEach( item -> jab.add( toJson(item) ) );
