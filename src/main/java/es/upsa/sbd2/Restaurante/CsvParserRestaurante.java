@@ -5,6 +5,8 @@ import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
 import es.upsa.sbd2.Enumeraciones.Provincia;
 import es.upsa.sbd2.Restaurante.Restaurante;
 
+import java.util.List;
+
 public class CsvParserRestaurante implements CsvParser<Restaurante> {
 
 
@@ -28,9 +30,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withMunicipio(tokens[11])
                 .withLocalidad(tokens[12])
                 .withNucleo(tokens[13])
-                .withTlf1(tokens[14])
-                .withTlf2(tokens[15])
-                .withTlf3(tokens[16])
+                .withTelefonos(List.of(tokens[14], tokens[15], tokens[16]))
                 .withEmail(tokens[17])
                 .withWeb(tokens[18])
                 .withCalidadQ(tokens[19])
@@ -43,4 +43,5 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withPosicion(tokens[26])
                 .build();
     }
+
 }

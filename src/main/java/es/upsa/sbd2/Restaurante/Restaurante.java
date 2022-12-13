@@ -32,6 +32,7 @@ public class Restaurante {
     @NonNull
     private String localidad;
     private String nucleo;
+    @Singular
     private List<String> telefonos;
     private String email;
     private String web;

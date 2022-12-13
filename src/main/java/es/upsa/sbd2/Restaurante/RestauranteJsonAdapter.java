@@ -1,15 +1,16 @@
 package es.upsa.sbd2.Restaurante;
 
 import es.upsa.sbd2.JsonAdapter;
-import es.upsa.sbd2.Restaurante.Restaurante;
+import es.upsa.sbd2.TelefonoJsonAdapter;
 import jakarta.json.Json;
 import jakarta.json.JsonValue;
 
-public class JsonAdapterRestaurantes implements JsonAdapter<Restaurante>
+public class RestauranteJsonAdapter implements JsonAdapter<Restaurante>
 {
+    private JsonAdapter<String> telefonoJsonAdapter = new TelefonoJsonAdapter();
+
     @Override
     public JsonValue toJson(Restaurante data) {
-
         return Json.createObjectBuilder()
 
                 .add("numRegistro", data.getNumRegistro())
@@ -31,11 +32,7 @@ public class JsonAdapterRestaurantes implements JsonAdapter<Restaurante>
                                                             .build())
                                          .build())
                 .add("contacto",Json.createObjectBuilder()
-                        .add("telefono", Json.createObjectBuilder()
-                                .add("telefono1", data.getTlf1())
-                                .add("telefono2", data.getTlf2())
-                                .add("telefono3", data.getTlf3())
-                                .build())
+                        .add("telefonos", telefonoJsonAdapter.toJsonArray(data.getTelefonos()))
                         .add("email", data.getEmail())
                         .add("web", data.getWeb()))
                 .build();

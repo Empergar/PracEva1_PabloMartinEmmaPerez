@@ -1,7 +1,7 @@
 package es.upsa.sbd2;
 
 import es.upsa.sbd2.Restaurante.CsvParserRestaurante;
-import es.upsa.sbd2.Restaurante.JsonAdapterRestaurantes;
+import es.upsa.sbd2.Restaurante.RestauranteJsonAdapter;
 import es.upsa.sbd2.Restaurante.Restaurante;
 
 import java.io.File;
@@ -22,7 +22,7 @@ public class Main {
     public static void createRestaurantesJson(File jsonFile, File csvFile) throws IOException {
         //Creamos CsvParser y su adapter correspondiente
         CsvParserRestaurante csvParser = new CsvParserRestaurante();
-        JsonAdapter<Restaurante> jsonAdapter = new JsonAdapterRestaurantes();
+        JsonAdapter<Restaurante> jsonAdapter = new RestauranteJsonAdapter();
 
         //Creamos el CsvReader genérico
         CsvReader csvReader = new CsvReader();
