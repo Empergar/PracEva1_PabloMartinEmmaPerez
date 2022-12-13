@@ -32,9 +32,7 @@ public class Restaurante {
     @NonNull
     private String localidad;
     private String nucleo;
-    private String tlf1;
-    private String tlf2;
-    private String tlf3;
+    private List<String> telefonos;
     private String email;
     private String web;
     private String calidadQ;
