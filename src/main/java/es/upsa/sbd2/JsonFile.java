@@ -17,8 +17,6 @@ public class JsonFile <T> {
         this.jsonAdapter = jsonAdapter;
     }
 
-
-
     public void write(File file, List<T> data) throws IOException{
 
         try (FileWriter fw = new FileWriter(file);
