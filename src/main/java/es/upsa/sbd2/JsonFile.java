@@ -11,7 +11,7 @@ import java.util.List;
 
 public class JsonFile <T> {
 
-    private JsonAdapter<T> jsonAdapter;
+    private final JsonAdapter<T> jsonAdapter;
 
     public JsonFile(JsonAdapter<T> jsonAdapter){
         this.jsonAdapter = jsonAdapter;
