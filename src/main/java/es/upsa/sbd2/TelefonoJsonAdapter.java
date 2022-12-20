@@ -6,6 +6,8 @@ import jakarta.json.JsonValue;
 
 public class TelefonoJsonAdapter implements JsonAdapter<String>
 {
+
+    //Muestra los telefonos como un array en el Json
     @Override
     public JsonValue toJson(String data) {
 
