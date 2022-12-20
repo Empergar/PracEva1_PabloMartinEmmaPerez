@@ -30,6 +30,9 @@ public class Main {
 
         createAlojamientosJson(alojamientosjsonFile, csvFile1);
         createRestaurantesJson(restaurantesjsonFile, csvFile2);
+
+        //Data data= new Data();
+        //data.loadAlojamientos(alojamientosjsonFile);
     }
 
     //Obtener fichero Json de alojamientos
