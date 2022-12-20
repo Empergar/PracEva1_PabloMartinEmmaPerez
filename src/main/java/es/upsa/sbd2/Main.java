@@ -20,6 +20,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
 
+        Data data= new Data();
+
         //Ficheros necesarios para los alojamientos:
         File csvFile1 = new File("alojamientos.csv");
         File alojamientosjsonFile = new File("alojamientos.json");
@@ -31,8 +33,7 @@ public class Main {
         createAlojamientosJson(alojamientosjsonFile, csvFile1);
         createRestaurantesJson(restaurantesjsonFile, csvFile2);
 
-        //Data data= new Data();
-        //data.loadAlojamientos(alojamientosjsonFile);
+        data.loadAlojamientos(alojamientosjsonFile);
     }
 
     //Obtener fichero Json de alojamientos

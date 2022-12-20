@@ -6,12 +6,17 @@ public enum CategoriaRestaurante {
 
     LUJO("lujo - 5 tenedores"), PRIMERA("1ª - 4 tenedores"),
     SEGUNDA("2ª - 3 tenedores"), TERCERA("3ª - 2 tenedores"),
-    CUARTA("4ª - 1 tenedor"), NO_ESPECIFICADO("No especificado");
+    CUARTA("4ª - 1 tenedor"), NO_ESPECIFICADO("no especificado");
 
     private final String categoriaRestaurante;
 
     CategoriaRestaurante(String categoriaRestaurante) {
         this.categoriaRestaurante = categoriaRestaurante;
+    }
+
+    public String getCategoriaRestauranteString()
+    {
+        return categoriaRestaurante;
     }
 
     //Creacion del metodo getCategoriaRestaurante

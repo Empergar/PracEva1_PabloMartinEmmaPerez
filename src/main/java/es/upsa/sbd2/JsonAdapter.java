@@ -12,6 +12,7 @@ public interface JsonAdapter <T> {
     //Funcion abstracta que tratará de crear los objetos java extraidos del csv a Json
     JsonValue toJson(T data);
 
+
     //Funcion que tratará de crear JsonArrays en el fichero Json
     default JsonArray toJsonArray(List<T> data)
     {

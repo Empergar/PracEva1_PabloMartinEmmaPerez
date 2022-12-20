@@ -5,13 +5,18 @@ import es.upsa.sbd2.DataNotValidException;
 public enum CategoriaAlojamiento {
     PRIMERA("1ª - 1 estrella"), SEGUNDA("2ª - 2 estrellas"),
     TERCERA("3ª - 3 estrellas"), CUARTA("4ª - 4 estrellas"),
-    QUINTA("5ª - 5 estrellas"), NO_ESPECIFICADO("No especificado");
+    QUINTA("5ª - 5 estrellas"), NO_ESPECIFICADO("no especificado");
 
 
     private final String categoriaAlojamiento;
 
     CategoriaAlojamiento(String categoriaAlojamiento) {
         this.categoriaAlojamiento = categoriaAlojamiento;
+    }
+
+    public String getCategoriaAlojamientoString()
+    {
+        return categoriaAlojamiento;
     }
 
     //Creacion del metodo getCategoriaAlojamiento

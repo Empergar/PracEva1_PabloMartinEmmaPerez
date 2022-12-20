@@ -2,6 +2,7 @@ package es.upsa.sbd2.Restaurante;
 
 import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
 import es.upsa.sbd2.Enumeraciones.Provincia;
+import jakarta.json.bind.annotation.JsonbProperty;
 import lombok.*;
 
 import java.util.List;
