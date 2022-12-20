@@ -18,7 +18,7 @@ public class RestauranteJsonAdapter implements JsonAdapter<Restaurante>
                 .add("categoria", data.getCategoria().ordinal())
                 .add("nombre", data.getNombre())
                 .add("plazas", data.getPlazas())
-                .add("accesible", data.getAccesible().equals(""))
+                .add("accesible", data.getAccesible().equals("Si"))
                 .add("ubicacion", Json.createObjectBuilder()
                                          .add("direccion", data.getDireccion())
                                          .add("cp", data.getCp())
