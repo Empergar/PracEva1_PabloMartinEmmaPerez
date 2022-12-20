@@ -11,6 +11,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+//<----------------------------------->//
+//    -*-Pablo Martin Sanchez-*-       //
+//     -*-Emma Perez Garcia-*-         //
+// -> Sistemas de Bases de Datos II <- //
+//             2022/2023               //
+//<----------------------------------->//
 public class Main {
     public static void main(String[] args) throws IOException {
 
@@ -19,17 +25,20 @@ public class Main {
         File alojamientosjsonFile = new File("alojamientos.json");
 
         //Ficheros necesarios para los restaurantes:
-        //File csvFile2 = new File("restaurantes.csv");
-        //File restaurantesjsonFile = new File("restaurantes.json");
+        File csvFile2 = new File("restaurantes.csv");
+        File restaurantesjsonFile = new File("restaurantes.json");
 
         createAlojamientosJson(alojamientosjsonFile, csvFile1);
-        //createRestaurantesJson(restaurantesjsonFile, csvFile2);
+        createRestaurantesJson(restaurantesjsonFile, csvFile2);
+
+        //Data data= new Data();
+        //data.loadAlojamientos(alojamientosjsonFile);
     }
 
     //Obtener fichero Json de alojamientos
     public static void createAlojamientosJson(File jsonFile, File csvFile) throws IOException {
         //Creamos CsvParser y su adapter correspondiente
-            CsvParserAlojamientos csvParser = new CsvParserAlojamientos();
+        CsvParserAlojamientos csvParser = new CsvParserAlojamientos();
         JsonAdapter<Alojamiento> jsonAdapter = new AlojamientoJsonAdapter();
 
         //Creamos el CsvReader genérico

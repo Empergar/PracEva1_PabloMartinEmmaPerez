@@ -15,6 +15,7 @@ public enum TipoAlojamiento {
         this.tipoAlojamiento = tipoAlojamiento;
     }
 
+    //Se comprueba la coincidencia de la cadena del fichero con alguna de la cadena de la enumeracion
     public static TipoAlojamiento getTipoAlojamiento(String tipo)
     {
         for (TipoAlojamiento tipAl: TipoAlojamiento.values())

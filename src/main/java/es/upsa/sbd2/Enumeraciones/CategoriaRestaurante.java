@@ -14,20 +14,25 @@ public enum CategoriaRestaurante {
         this.categoriaRestaurante = categoriaRestaurante;
     }
 
+    //Creacion del metodo getCategoriaRestaurante
     public static CategoriaRestaurante getCategoriaRestaurante(String categoria)
     {
+        //Se comprueba si el campo al ser opcional puede estar vacio
         if (categoria.equals(""))
         {
             return CategoriaRestaurante.NO_ESPECIFICADO;
         }
 
+        //Se comprueba si recorriendo la enumeracion...
         for (CategoriaRestaurante cat: CategoriaRestaurante.values())
         {
+            //Se encuentra coincidencia entre lo encontrado en el csv y la enumeracion
             if (cat.categoriaRestaurante.equals(categoria.toLowerCase()))
             {
                 return cat;
             }
         }
+        //Si no es así propaga excepcion
         throw new DataNotValidException();
     }
 }

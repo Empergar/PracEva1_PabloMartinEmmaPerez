@@ -7,7 +7,10 @@ import jakarta.json.JsonValue;
 
 public class AlojamientoJsonAdapter implements JsonAdapter<Alojamiento> {
 
+    //Creamos el adaptador para el telefono porque necesita un formato/estructura especial
     private final JsonAdapter<String> telefonosJsonAdapter = new TelefonoJsonAdapter();
+
+    //Funcion que creara los objetos Json de los alojamientos
     @Override
     public JsonValue toJson(Alojamiento data) {
 

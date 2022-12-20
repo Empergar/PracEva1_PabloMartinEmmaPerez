@@ -13,6 +13,7 @@ public enum Provincia {
         this.provincia = provincia;
     }
 
+    //En este caso se recorre la enumeracion hasta dar con la provincia que aparece en los ficheros
     public static Provincia getProvincia(String provincia)
     {
         for (Provincia prov: Provincia.values())
