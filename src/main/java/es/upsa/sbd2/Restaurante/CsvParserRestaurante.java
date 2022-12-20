@@ -30,7 +30,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withMunicipio(tokens[11])
                 .withLocalidad(tokens[12])
                 .withNucleo(tokens[13])
-                .withTelefonos(List.of(tokens[14], tokens[15], tokens[16]))
+                .withTelefonos(getListaTelefonos(List.of(tokens[14], tokens[15], tokens[16])))
                 .withEmail(tokens[17])
                 .withWeb(tokens[18])
                 .withCalidadQ(tokens[19])
@@ -43,5 +43,4 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                 .withPosicion(tokens[26])
                 .build();
     }
-
 }
