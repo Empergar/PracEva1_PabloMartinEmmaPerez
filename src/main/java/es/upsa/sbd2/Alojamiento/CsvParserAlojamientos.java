@@ -12,6 +12,7 @@ public class CsvParserAlojamientos implements CsvParser<Alojamiento> {
     public Alojamiento parse(String csvLine) {
 
         String[] tokens = csvLine.replace("\"", "").split(";", 27);
+        System.out.println(tokens[0] + tokens[1] + tokens[2]);
 
         return Alojamiento.builder()
                 .withNumRegistro(tokens[0])

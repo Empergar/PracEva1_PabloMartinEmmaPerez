@@ -7,7 +7,7 @@ import jakarta.json.JsonValue;
 
 public class RestauranteJsonAdapter implements JsonAdapter<Restaurante>
 {
-    private JsonAdapter<String> telefonoJsonAdapter = new TelefonoJsonAdapter();
+    private final JsonAdapter<String> telefonoJsonAdapter = new TelefonoJsonAdapter();
 
     @Override
     public JsonValue toJson(Restaurante data) {
