@@ -3,13 +3,11 @@ package es.upsa.sbd2.Alojamiento;
 import es.upsa.sbd2.Enumeraciones.CategoriaAlojamiento;
 import es.upsa.sbd2.Enumeraciones.Provincia;
 import es.upsa.sbd2.Enumeraciones.TipoAlojamiento;
-import es.upsa.sbd2.JsonAdapter;
-import es.upsa.sbd2.TelefonoJsonAdapter;
 import jakarta.json.JsonObject;
-import jakarta.json.JsonString;
 import jakarta.json.JsonValue;
 import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.json.bind.annotation.JsonbProperty;
+import jakarta.json.bind.annotation.JsonbPropertyOrder;
 import lombok.*;
 
 import java.util.List;
@@ -18,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
+@JsonbPropertyOrder({"numRegistro", "tipo", "categoria", "nombre", "plazas", "accMinusvalidos", "ubicacion", "contactos"})
 public class Alojamiento
 {
 
@@ -30,12 +29,12 @@ public class Alojamiento
                                  @JsonbProperty("ubicacion") JsonObject ubicacion,
                                  @JsonbProperty("contactos") JsonObject contactos)
     {
-            String accminusvalidos;
+            String accMinusvalidos;
 
             if (discapacidad){
-                accminusvalidos = "Si";
+                accMinusvalidos = "Si";
             } else {
-                accminusvalidos = null;
+                accMinusvalidos = "";
             }
 
         return Alojamiento.builder()
@@ -43,7 +42,7 @@ public class Alojamiento
                 .withTipo(TipoAlojamiento.getTipoAlojamiento(tipo))
                 .withCategoria(CategoriaAlojamiento.getCategoriaAlojamiento(categoria))
                 .withNombre(nombre)
-                .withAccMinusvalidos(accminusvalidos)
+                .withAccMinusvalidos(accMinusvalidos)
                 .withDireccion(ubicacion.getString("direccion"))
                 .withCodPostal(ubicacion.getString("codPostal"))
                 .withProvincia(Provincia.getProvincia(ubicacion.getString("provincia")))
@@ -52,7 +51,7 @@ public class Alojamiento
                 .withNucleo(ubicacion.getString("nucleo"))
                 .withLongitud(ubicacion.getJsonObject("gps").getString("longitud"))
                 .withLatitud(ubicacion.getJsonObject("gps").getString("latitud"))
-                .withTelefonos(contactos.getJsonArray("telefonos").getValuesAs(JsonValue::toString))
+                .withTelefonos(contactos.getJsonArray("telefonos").getValuesAs((JsonValue::toString)))
                 .withEmail(contactos.getString("email"))
                 .withWeb(contactos.getString("web"))
                 .build();
@@ -84,5 +83,6 @@ public class Alojamiento
     private Integer plazas;
     private String longitud;
     private String latitud;
+    @JsonbProperty (value = "discapacidad")
     private String accMinusvalidos;
 }

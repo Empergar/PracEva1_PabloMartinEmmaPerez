@@ -3,6 +3,7 @@ package es.upsa.sbd2;
 import es.upsa.sbd2.Alojamiento.Alojamiento;
 import es.upsa.sbd2.Alojamiento.AlojamientoJsonAdapter;
 import es.upsa.sbd2.Alojamiento.CsvParserAlojamientos;
+import es.upsa.sbd2.Enumeraciones.TipoAlojamiento;
 import es.upsa.sbd2.Restaurante.CsvParserRestaurante;
 import es.upsa.sbd2.Restaurante.RestauranteJsonAdapter;
 import es.upsa.sbd2.Restaurante.Restaurante;
@@ -10,6 +11,7 @@ import es.upsa.sbd2.Restaurante.Restaurante;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.function.Predicate;
 
 //<----------------------------------->//
 //    -*-Pablo Martin Sanchez-*-       //
@@ -34,6 +36,9 @@ public class Main {
         createRestaurantesJson(restaurantesjsonFile, csvFile2);
 
         data.loadAlojamientos(alojamientosjsonFile);
+        File file1 = new File("AlojamientosByCodigoPostal37001AndTipoHostal.json");
+        data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001")
+                                        .and(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL)), file1);
     }
 
     //Obtener fichero Json de alojamientos
