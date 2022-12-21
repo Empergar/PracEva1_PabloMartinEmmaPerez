@@ -34,7 +34,7 @@ public class CsvParserAlojamientos implements CsvParser<Alojamiento> {
                           .withPlazas(Integer.parseInt(tokens[18].replaceFirst("", "0")))
                           .withLatitud(tokens[19])
                           .withLongitud(tokens[20])
-                          .withAccMinusvalidos(tokens[21])
+                          .withAccMinusvalidos(tokens[21].equals("Si"))
                           .build();
     }
 

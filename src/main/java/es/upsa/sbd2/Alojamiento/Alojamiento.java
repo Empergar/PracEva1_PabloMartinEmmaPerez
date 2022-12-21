@@ -34,21 +34,13 @@ public class Alojamiento
                                  @JsonbProperty("ubicacion") JsonObject ubicacion,
                                  @JsonbProperty("contactos") JsonObject contactos)
     {
-            String accMinusvalidos;
-
-            if (discapacidad){
-                accMinusvalidos = "Si";
-            } else {
-                accMinusvalidos = "";
-            }
-
         return Alojamiento.builder()
                 .withNumRegistro(numRegistro)
                 .withTipo(TipoAlojamiento.getTipoAlojamiento(tipo))
                 .withCategoria(CategoriaAlojamiento.getCategoriaAlojamiento(categoria))
                 .withNombre(nombre)
                 .withPlazas(plazas)
-                .withAccMinusvalidos(accMinusvalidos)
+                .withAccMinusvalidos(discapacidad)
                 .withDireccion(ubicacion.getString("direccion"))
                 .withCodPostal(ubicacion.getString("codPostal"))
                 .withProvincia(Provincia.getProvincia(ubicacion.getString("provincia")))
@@ -90,7 +82,7 @@ public class Alojamiento
     private String longitud;
     private String latitud;
     @JsonbProperty (value = "discapacidad")
-    private String accMinusvalidos;
+    private Boolean accMinusvalidos;
 
     public String getCategoria() {
         return categoria.getCategoriaAlojamientoString();

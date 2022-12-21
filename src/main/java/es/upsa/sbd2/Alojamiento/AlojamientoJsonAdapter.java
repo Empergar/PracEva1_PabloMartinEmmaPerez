@@ -20,7 +20,7 @@ public class AlojamientoJsonAdapter implements JsonAdapter<Alojamiento> {
                     .add("categoria",data.getCategoria())
                     .add("nombre", data.getNombre())
                     .add("plazas", data.getPlazas())
-                    .add("discapacidad", data.getAccMinusvalidos().equals("Si"))
+                    .add("discapacidad", data.getAccMinusvalidos())
                     .add("ubicacion", Json.createObjectBuilder()
                                              .add("direccion", data.getDireccion())
                                              .add("codPostal", data.getCodPostal())

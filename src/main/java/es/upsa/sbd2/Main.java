@@ -52,7 +52,10 @@ public class Main {
         //Creacion de los ficheros y llamada a la funcion saveAlojamiento
         File file1 = new File("AlojamientosByCodigoPostal37001AndTipoHostal.json");
         //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001")
-                //.and(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL)), file1);
+        //                                .and(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL)), file1);
+
+        File file5 = new File("AlojamientosByCodigoPostal37001.json");
+        data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001"), file5);
 
         File file2 = new File("AlojamientosByCodigoPostal37700.json");
         //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37700"), file2);
@@ -62,15 +65,17 @@ public class Main {
 
         //Creacion de la lista y llamada a la funcion filterRestaurantes
         List<Restaurante> restaurantesByLocalidadBejar = data.filterRestaurantes(Predicates.restaurantesByLocalidad("bejar"));
-        //restaurantesByLocalidadBejar.forEach(System.out::println);
+        restaurantesByLocalidadBejar.forEach(System.out::println);
         // for (Restaurante rest: restaurantesByLocalidadBejar)
         // {
         //   System.out.println(rest.getNombre() + "\t" + rest.getLocalidad());
         // }
 
-        List<Restaurante> restaurantesByLocalidadVitigudino = data.filterRestaurantes(Predicates.restaurantesByLocalidad("vitigudino"));
-        restaurantesByLocalidadVitigudino.forEach(System.out::println);
+        //List<Restaurante> restaurantesByLocalidadVitigudino = data.filterRestaurantes(Predicates.restaurantesByLocalidad("vitigudino"));
+        //restaurantesByLocalidadVitigudino.forEach(System.out::println);
 
+        File file4 = new File("AlojamientosWithRestByCodigoPostal37700.json");
+        //data.saveAlojamientosWithRestaurantes(Predicates.alojamientosByCodigoPostal("37700"), file4);
 
     }
 

@@ -47,7 +47,7 @@ public class Restaurante
     private String longitud;
     private String latitud;
     @JsonbProperty (value = "discapacidad")
-    private String accMinusvalidos;
+    private Boolean accMinusvalidos;
     private String posicion;
 
     public String getCategoria() {

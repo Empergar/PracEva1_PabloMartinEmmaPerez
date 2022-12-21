@@ -18,7 +18,7 @@ public class Predicates {
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si el alojamiento está ubicado en una determinada Provincia.
     public static Predicate<Alojamiento> alojamientosByProvincia(Provincia provincia){
-        return alojamiento -> alojamiento.getProvincia().equals(provincia);
+        return alojamiento -> Provincia.getProvincia(alojamiento.getProvincia()).equals(provincia);
     }
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si el tipo del alojamiento lo es de un determinado TipoAlojamiento.
@@ -28,7 +28,7 @@ public class Predicates {
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si un alojamiento lo es de una determinada Categoría
     public static Predicate<Alojamiento> alojamientosByCategoria(CategoriaAlojamiento categoria){
-        return alojamiento -> alojamiento.getCategoria().equals(categoria);
+        return alojamiento -> CategoriaAlojamiento.getCategoriaAlojamiento(alojamiento.getCategoria()).equals(categoria);
     }
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si un alojamiento tiene, al menos, un número determinado de plazas.
@@ -43,17 +43,19 @@ public class Predicates {
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si el alojamiento tiene accesibilildad para minusválidos.
     public static Predicate<Alojamiento> alojamientosByAccesibilidadMinusvaidos(){
-        return alojamiento -> alojamiento.getAccMinusvalidos().toLowerCase().equals("si");
+        return Alojamiento::getAccMinusvalidos;
     }
 
     //Crea y devuelve un Predicate<Alojamiento> que siempre se cumplirá para cualquier alojamiento.
     public static Predicate<Alojamiento> allAlojamientos(){
         return new allAlojamientos();
+        //Otra solución que planteamos de primeras:
+        //return alojamiento -> alojamiento.equals(alojamiento);
     }
 
     //Crea y devuelve un Predicate<Restaurante> que verifica si el restaurante está ubicado en una determinada Provincia.
     public static Predicate<Restaurante> restaurantesByProvincia(Provincia provincia){
-        return restaurante -> restaurante.getProvincia().equals(provincia);
+        return restaurante -> Provincia.getProvincia(restaurante.getProvincia()).equals(provincia);
     }
 
     //Crea y devuelve un Predicate<Restaurante> que verifica si un restaurante está ubicado en una determinada localidad
@@ -63,7 +65,7 @@ public class Predicates {
 
     //Crea y devuelve un Predicate<Restaurante> que verifica si un restaurante lo es de una determinada Categoría
     public static Predicate<Restaurante> restaurantesByCategoria(CategoriaRestaurante categoria){
-        return restaurante -> restaurante.getCategoria().equals(categoria);
+        return restaurante -> CategoriaRestaurante.getCategoriaRestaurante(restaurante.getCategoria()).equals(categoria);
     }
 
     //Crea y devuelve un Predicate<Restaurante> que verifica si un restaurante tiene, al menos, un número determinado de plazas.
@@ -71,10 +73,40 @@ public class Predicates {
         return restaurante -> restaurante.getPlazas() >= plazas;
     }
 
-    //Crea y devuelve un Predicate<Restaurante> que verificará si el restaurante está ubicado en la misma provincia y localidad que el alojamiento, si su categoría es acorde a la categoría del alojamiento y si dispone de al menos un número de plazas igual a las del alojamiento.
-/*
+    //Crea y devuelve un Predicate<Restaurante> que verificará si el restaurante está ubicado en la misma provincia y
+    // localidad que el alojamiento, si su categoría es acorde a la categoría del alojamiento y si dispone de al menos
+    // un número de plazas igual a las del alojamiento.
     public static Predicate<Restaurante> restaurantesByAlojamiento(Alojamiento alojamiento){
 
+        return Predicates.restaurantesByProvincia(Provincia.getProvincia(alojamiento.getProvincia()))
+                                                     .and(Predicates.restaurantesByLocalidad(alojamiento.getLocalidad()))
+                                                     .and(Predicates.restaurantesByCategoria(getCategoriaEquivalente(alojamiento)))
+                                                     .and(Predicates.restaurantesByPlazas(alojamiento.getPlazas()));
     }
-*/
+
+    public static CategoriaRestaurante getCategoriaEquivalente(Alojamiento alojamiento)
+    {
+        CategoriaRestaurante categoriaEquivalente;
+
+        switch (CategoriaAlojamiento.getCategoriaAlojamiento(alojamiento.getCategoria()))
+        {
+            case QUINTA:
+                categoriaEquivalente = CategoriaRestaurante.LUJO;
+                break;
+            case CUARTA:
+                categoriaEquivalente = CategoriaRestaurante.PRIMERA;
+                break;
+            case TERCERA:
+                categoriaEquivalente = CategoriaRestaurante.SEGUNDA;
+                break;
+            case SEGUNDA:
+                categoriaEquivalente = CategoriaRestaurante.TERCERA;
+                break;
+            case PRIMERA:
+                categoriaEquivalente = CategoriaRestaurante.CUARTA;
+                break;
+            default: categoriaEquivalente = CategoriaRestaurante.UNSPECIFIED;
+        }
+        return categoriaEquivalente;
+    }
 }

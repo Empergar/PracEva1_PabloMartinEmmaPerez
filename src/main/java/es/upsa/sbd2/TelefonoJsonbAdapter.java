@@ -10,14 +10,13 @@ import java.util.List;
 
 public class TelefonoJsonbAdapter implements JsonbAdapter<List<String>, JsonArray>
 {
-
     @Override
     public JsonArray adaptToJson(List<String> strings) throws Exception {
         return null;
     }
 
     @Override
-    public List<String> adaptFromJson(JsonArray jsonValues){
+    public List<String> adaptFromJson(JsonArray jsonValues) {
             List<String> tlfs = new ArrayList<>();
             for (JsonValue jsonValue : jsonValues) {
                 tlfs.add(jsonValue.toString().replace("\"", ""));

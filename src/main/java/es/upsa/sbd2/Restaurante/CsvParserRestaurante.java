@@ -39,7 +39,7 @@ public class CsvParserRestaurante implements CsvParser<Restaurante> {
                           .withPlazas(Integer.parseInt(tokens[22].replaceFirst("", "0")))
                           .withLongitud(tokens[23])
                           .withLatitud(tokens[24])
-                          .withAccMinusvalidos(tokens[25])
+                          .withAccMinusvalidos(tokens[25].equals("Si"))
                           .withPosicion(tokens[26])
                           .build();
     }
