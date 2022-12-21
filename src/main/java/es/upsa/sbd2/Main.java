@@ -37,8 +37,10 @@ public class Main {
 
         data.loadAlojamientos(alojamientosjsonFile);
         File file1 = new File("AlojamientosByCodigoPostal37001AndTipoHostal.json");
+        File file2 = new File("AlojamientosByCodigoPostal3700.json");
         data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001")
                                         .and(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL)), file1);
+        data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37700"), file2);
     }
 
     //Obtener fichero Json de alojamientos
