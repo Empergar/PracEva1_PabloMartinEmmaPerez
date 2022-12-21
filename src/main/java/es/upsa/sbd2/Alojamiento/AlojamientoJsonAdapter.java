@@ -15,7 +15,7 @@ public class AlojamientoJsonAdapter implements JsonAdapter<Alojamiento> {
     public JsonValue toJson(Alojamiento data) {
 
         return  Json.createObjectBuilder()
-                    .add("numRegistro", data.getNumRegistro())
+                    .add("nregistro", data.getNumRegistro())
                     .add("tipo",data.getTipo().getTipoAlojamientoString())
                     .add("categoria",data.getCategoria())
                     .add("nombre", data.getNombre())
@@ -23,7 +23,7 @@ public class AlojamientoJsonAdapter implements JsonAdapter<Alojamiento> {
                     .add("discapacidad", data.getAccMinusvalidos())
                     .add("ubicacion", Json.createObjectBuilder()
                                              .add("direccion", data.getDireccion())
-                                             .add("codPostal", data.getCodPostal())
+                                             .add("cpostal", data.getCodPostal())
                                              .add("provincia", data.getProvincia())
                                              .add("municipio", data.getMunicipio())
                                              .add("localidad", data.getLocalidad())

@@ -25,23 +25,22 @@ public class RestauranteJsonbAdapter implements JsonbAdapter<Restaurante, JsonOb
     public Restaurante adaptFromJson(JsonObject jsonObject) throws Exception {
         return Restaurante.builder()
                 .withEstablecimiento("Restaurantes")
-                .withNumRegistro(jsonObject.getString("numRegistro"))
-                .withTipo(jsonObject.getString("tipo"))
+                .withNumRegistro(jsonObject.getString("nregistro"))
                 .withCategoria(CategoriaRestaurante.getCategoriaRestaurante(jsonObject.getString("categoria")))
                 .withNombre(jsonObject.getString("nombre"))
                 .withPlazas(jsonObject.getInt("plazas"))
                 .withAccMinusvalidos(jsonObject.getBoolean("discapacidad"))
                 .withDireccion(jsonObject.getJsonObject("ubicacion").getString("direccion"))
-                .withCodPostal(jsonObject.getJsonObject("ubicacion").getString("codPostal"))
+                .withCodPostal(jsonObject.getJsonObject("ubicacion").getString("cpostal"))
                 .withProvincia(Provincia.getProvincia(jsonObject.getJsonObject("ubicacion").getString("provincia")))
                 .withMunicipio(jsonObject.getJsonObject("ubicacion").getString("municipio"))
                 .withLocalidad(jsonObject.getJsonObject("ubicacion").getString("localidad"))
                 .withNucleo(jsonObject.getJsonObject("ubicacion").getString("nucleo"))
                 .withLongitud(jsonObject.getJsonObject("ubicacion").getJsonObject("gps").getString("longitud"))
                 .withLatitud(jsonObject.getJsonObject("ubicacion").getJsonObject("gps").getString("latitud"))
-                .withTelefonos(new TelefonoJsonbAdapter().adaptFromJson(jsonObject.getJsonObject("contacto").getJsonArray("telefonos")))
-                .withEmail(jsonObject.getJsonObject("contacto").getString("email"))
-                .withWeb(jsonObject.getJsonObject("contacto").getString("web"))
+                .withTelefonos(new TelefonoJsonbAdapter().adaptFromJson(jsonObject.getJsonObject("contactos").getJsonArray("telefonos")))
+                .withEmail(jsonObject.getJsonObject("contactos").getString("email"))
+                .withWeb(jsonObject.getJsonObject("contactos").getString("web"))
                 .build();
     }
 

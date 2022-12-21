@@ -41,6 +41,7 @@ public class CsvParserAlojamientos implements CsvParser<Alojamiento> {
                           .build();
     }
 
+    //Funcion que controla y corrige si en el CSV hay dos emails separados por ;
     public String[] controlarEmailsDobles(String[] tokens)
     {
         if (!tokens[22].isEmpty()){

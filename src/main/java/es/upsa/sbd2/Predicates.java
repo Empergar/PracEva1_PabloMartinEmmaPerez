@@ -43,7 +43,7 @@ public class Predicates {
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si el alojamiento tiene accesibilildad para minusválidos.
     public static Predicate<Alojamiento> alojamientosByAccesibilidadMinusvalidos(){
-        return alojamiento -> alojamiento.getAccMinusvalidos();
+        return Alojamiento::getAccMinusvalidos;
     }
 
     //Crea y devuelve un Predicate<Alojamiento> que siempre se cumplirá para cualquier alojamiento.

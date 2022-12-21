@@ -55,7 +55,7 @@ public class Main {
         //                                .and(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL)), file1);
 
         File file5 = new File("AlojamientosByCodigoPostal37001.json");
-        data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001"), file5);
+        //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001"), file5);
 
         File file2 = new File("AlojamientosByAccTrue.json");
         data.saveAlojamientos(Predicates.alojamientosByAccesibilidadMinusvalidos(), file2);

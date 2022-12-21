@@ -16,7 +16,7 @@ public class AlojamientosWithRestJsonbAdapter implements JsonbAdapter<Alojamient
                 .add("nombre", alojamientosWithRestaurantes.getAlojamiento().getNombre())
                 .add("ubicacion", Json.createObjectBuilder()
                                          .add("direccion", alojamientosWithRestaurantes.getAlojamiento().getDireccion())
-                                         .add("codPostal", alojamientosWithRestaurantes.getAlojamiento().getCodPostal())
+                                         .add("cpostal", alojamientosWithRestaurantes.getAlojamiento().getCodPostal())
                                          .add("provincia", alojamientosWithRestaurantes.getAlojamiento().getProvincia())
                                          .add("municipio", alojamientosWithRestaurantes.getAlojamiento().getMunicipio())
                                          .add("localidad", alojamientosWithRestaurantes.getAlojamiento().getLocalidad())

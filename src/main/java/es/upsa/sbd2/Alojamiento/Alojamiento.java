@@ -18,14 +18,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
-@JsonbPropertyOrder({"numRegistro", "tipo", "categoria", "nombre", "plazas", "accMinusvalidos",
-                     "direccion", "codPostal", "provincia", "municipio", "localidad", "nucleo",
+@JsonbPropertyOrder({"nregistro", "tipo", "categoria", "nombre", "plazas", "discapacidad",
+                     "direccion", "cpostal", "provincia", "municipio", "localidad", "nucleo",
                      "longitud", "latitud", "telefonos", "email", "web"})
 public class Alojamiento
 {
 
     @JsonbCreator
-    public static Alojamiento of(@JsonbProperty("numRegistro") String numRegistro,
+    public static Alojamiento of(@JsonbProperty("nregistro") String numRegistro,
                                  @JsonbProperty("tipo") String tipo,
                                  @JsonbProperty("categoria") String categoria,
                                  @JsonbProperty("nombre") String nombre,
@@ -42,7 +42,7 @@ public class Alojamiento
                 .withPlazas(plazas)
                 .withAccMinusvalidos(discapacidad)
                 .withDireccion(ubicacion.getString("direccion"))
-                .withCodPostal(ubicacion.getString("codPostal"))
+                .withCodPostal(ubicacion.getString("cpostal"))
                 .withProvincia(Provincia.getProvincia(ubicacion.getString("provincia")))
                 .withMunicipio(ubicacion.getString("municipio"))
                 .withLocalidad(ubicacion.getString("localidad"))
@@ -56,6 +56,7 @@ public class Alojamiento
     }
 
     @NonNull
+    @JsonbProperty (value = "nregistro")
     private String numRegistro;
     @NonNull
     private TipoAlojamiento tipo;
@@ -65,6 +66,7 @@ public class Alojamiento
     private String nombre;
     private String direccion;
     @NonNull
+    @JsonbProperty (value = "cpostal")
     private String codPostal;
     @NonNull
     private Provincia provincia;
