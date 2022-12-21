@@ -30,6 +30,7 @@ public class Data
 
         //Se elimina unos " innecesarios que se generan al crear los objetos alojamientos en su lista de teléfonos,
         //ya que, como pasamos de JsonValue a String en el Builder, este transforma los " a string junto con el teléfono
+        /*
         for (Alojamiento alojamiento: alojamientos)
         {
             List<String> tlfsAux = new ArrayList<>();
@@ -39,6 +40,8 @@ public class Data
             }
             alojamiento.setTelefonos(tlfsAux);
         }
+        ECHAR VISTAZO A VER SI SE PUEDE ARREGLAR EN EL ALOJAMIENTOJSONBADAPTER
+         */
     }
 
     public void loadRestaurantes(File jsonFile)
