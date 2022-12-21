@@ -22,38 +22,28 @@ public class Data
         Jsonb jsonb = createJsonb();
 
         //Recuperamos un LIST de los alojamientos
-        try(FileReader fr = new FileReader("alojamientos.json");
+        try(FileReader fr = new FileReader(jsonFile);
             BufferedReader br = new BufferedReader(fr)){
 
             alojamientos = jsonb.fromJson(br, new ArrayList<Alojamiento>() {}.getClass().getGenericSuperclass());
         }
-
-        //Se elimina unos " innecesarios que se generan al crear los objetos alojamientos en su lista de teléfonos,
-        //ya que, como pasamos de JsonValue a String en el Builder, este transforma los " a string junto con el teléfono
-        /*
-        for (Alojamiento alojamiento: alojamientos)
-        {
-            List<String> tlfsAux = new ArrayList<>();
-            for (String tlf: alojamiento.getTelefonos())
-            {
-                tlfsAux.add(tlf.replace("\"", ""));
-            }
-            alojamiento.setTelefonos(tlfsAux);
-        }
-        ECHAR VISTAZO A VER SI SE PUEDE ARREGLAR EN EL ALOJAMIENTOJSONBADAPTER
-         */
     }
 
-    public void loadRestaurantes(File jsonFile)
-    {
+    public void loadRestaurantes(File jsonFile) throws IOException {
         Jsonb jsonb = createJsonb();
+
+        //Recuperamos un LIST de los restaurantes
+        try(FileReader fr = new FileReader(jsonFile);
+            BufferedReader br = new BufferedReader(fr)){
+
+            restaurantes = jsonb.fromJson(br, new ArrayList<Restaurante>() {}.getClass().getGenericSuperclass());
+        }
 
     }
 
     public void saveAlojamientos(Predicate<Alojamiento> condition, File newJsonFile) throws IOException
     {
-        Jsonb jsonb = JsonbBuilder.newBuilder()
-                                  .build();;
+        Jsonb jsonb = createJsonb();
 
         List<Alojamiento> resultadoAlojamientos = alojamientos.stream()
                                                               .filter(condition)

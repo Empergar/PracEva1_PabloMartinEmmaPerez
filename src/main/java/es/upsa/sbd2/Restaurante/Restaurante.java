@@ -3,6 +3,7 @@ package es.upsa.sbd2.Restaurante;
 import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
 import es.upsa.sbd2.Enumeraciones.Provincia;
 import jakarta.json.bind.annotation.JsonbProperty;
+import jakarta.json.bind.annotation.JsonbTypeAdapter;
 import lombok.*;
 
 import java.util.List;
@@ -11,7 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
-public class Restaurante {
+@JsonbTypeAdapter(RestauranteJsonbAdapter.class)
+public class Restaurante
+{
     @NonNull
     private String establecimiento;
     @NonNull
@@ -25,7 +28,7 @@ public class Restaurante {
     private String nombre;
     private String direccion;
     @NonNull
-    private String cp;
+    private String codPostal;
     @NonNull
     private Provincia provincia;
     @NonNull
@@ -43,7 +46,8 @@ public class Restaurante {
     private Integer plazas;
     private String longitud;
     private String latitud;
-    private String accesible;
+    @JsonbProperty (value = "discapacidad")
+    private String accMinusvalidos;
     private String posicion;
 
 }

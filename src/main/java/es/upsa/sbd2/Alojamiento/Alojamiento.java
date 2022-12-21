@@ -3,11 +3,13 @@ package es.upsa.sbd2.Alojamiento;
 import es.upsa.sbd2.Enumeraciones.CategoriaAlojamiento;
 import es.upsa.sbd2.Enumeraciones.Provincia;
 import es.upsa.sbd2.Enumeraciones.TipoAlojamiento;
+import es.upsa.sbd2.TelefonoJsonbAdapter;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonValue;
 import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.json.bind.annotation.JsonbProperty;
 import jakarta.json.bind.annotation.JsonbPropertyOrder;
+import jakarta.json.bind.annotation.JsonbTypeAdapter;
 import lombok.*;
 
 import java.util.List;
@@ -16,7 +18,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
-@JsonbPropertyOrder({"numRegistro", "tipo", "categoria", "nombre", "plazas", "accMinusvalidos", "ubicacion", "contactos"})
+@JsonbPropertyOrder({"numRegistro", "tipo", "categoria", "nombre", "plazas", "accMinusvalidos",
+                     "direccion", "codPostal", "provincia", "municipio", "localidad", "nucleo",
+                     "longitud", "latitud", "telefonos", "email", "web"})
 public class Alojamiento
 {
 
@@ -53,7 +57,7 @@ public class Alojamiento
                 .withNucleo(ubicacion.getString("nucleo"))
                 .withLongitud(ubicacion.getJsonObject("gps").getString("longitud"))
                 .withLatitud(ubicacion.getJsonObject("gps").getString("latitud"))
-                .withTelefonos(contactos.getJsonArray("telefonos").getValuesAs((JsonValue::toString)))
+                .withTelefonos(new TelefonoJsonbAdapter().adaptFromJson(contactos.getJsonArray("telefonos")))
                 .withEmail(contactos.getString("email"))
                 .withWeb(contactos.getString("web"))
                 .build();
@@ -87,4 +91,12 @@ public class Alojamiento
     private String latitud;
     @JsonbProperty (value = "discapacidad")
     private String accMinusvalidos;
+
+    public String getCategoria() {
+        return categoria.getCategoriaAlojamientoString();
+    }
+
+    public String getProvincia() {
+        return provincia.getProvinciaString();
+    }
 }
