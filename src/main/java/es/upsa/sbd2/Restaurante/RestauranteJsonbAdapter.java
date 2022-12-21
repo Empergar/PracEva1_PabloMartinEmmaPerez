@@ -11,7 +11,8 @@ import jakarta.json.bind.adapter.JsonbAdapter;
 
 import java.util.List;
 
-public class RestauranteJsonbAdapter implements JsonbAdapter<Restaurante, JsonObject> {
+public class RestauranteJsonbAdapter implements JsonbAdapter<Restaurante, JsonObject>
+{
     @Override
     public JsonObject adaptToJson(Restaurante restaurante) {
         return Json.createObjectBuilder()
