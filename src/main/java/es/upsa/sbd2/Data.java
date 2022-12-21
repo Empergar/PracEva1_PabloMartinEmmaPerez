@@ -14,9 +14,13 @@ import java.util.stream.Collectors;
 
 public class Data
 {
+    //Listas a nivel de clase para tratar después los objetos que contienen
     private List<Alojamiento> alojamientos = new ArrayList<>();
     private List<Restaurante> restaurantes = new ArrayList<>();
 
+    //<-------------------------------------------------------------->//
+    //    Carga y almacena en memoria los alojamientos hoteleros      //
+    //<-------------------------------------------------------------->//
     public void loadAlojamientos(File jsonFile) throws IOException
     {
         Jsonb jsonb = createJsonb();
@@ -24,23 +28,28 @@ public class Data
         //Recuperamos un LIST de los alojamientos
         try(FileReader fr = new FileReader(jsonFile);
             BufferedReader br = new BufferedReader(fr)){
-
             alojamientos = jsonb.fromJson(br, new ArrayList<Alojamiento>() {}.getClass().getGenericSuperclass());
         }
     }
 
-    public void loadRestaurantes(File jsonFile) throws IOException {
+    //<-------------------------------------------------------------->//
+    //          Carga y almacena en memoria los restaurantes          //
+    //<-------------------------------------------------------------->//
+    public void loadRestaurantes(File jsonFile) throws IOException
+    {
         Jsonb jsonb = createJsonb();
 
         //Recuperamos un LIST de los restaurantes
         try(FileReader fr = new FileReader(jsonFile);
             BufferedReader br = new BufferedReader(fr)){
-
             restaurantes = jsonb.fromJson(br, new ArrayList<Restaurante>() {}.getClass().getGenericSuperclass());
         }
 
     }
 
+    //<------------------------------------------------------------------------------------->//
+    //       Seleccion de alojamientos hoteleros que cumplen una determinada condición       //
+    //<------------------------------------------------------------------------------------->//
     public void saveAlojamientos(Predicate<Alojamiento> condition, File newJsonFile) throws IOException
     {
         Jsonb jsonb = createJsonb();
@@ -56,6 +65,9 @@ public class Data
         }
     }
 
+    //<------------------------------------------------------------------------------------->//
+    //           Seleccion de restaurantes que cumplen una determinada condición             //
+    //<------------------------------------------------------------------------------------->//
     public List<Restaurante> filterRestaurantes(Predicate<Restaurante> condition)
     {
         return restaurantes.stream()
@@ -63,14 +75,17 @@ public class Data
                            .collect(Collectors.toList());
     }
 
+    //<--------------------------------------------------------------------------------------------------------------->//
+    //     Crea un fichero json en el que se incluirán los alojamientos conteniendo sus restaurantes relacionados.     //
+    //<--------------------------------------------------------------------------------------------------------------->//
     public void saveAlojamientosWithRestaurantes(Predicate<Alojamiento> condition, File jsonFile)
     {
 
     }
 
 
-    public static Jsonb createJsonb(){
-        //Aqui se añaden las configuraciones de como quieres que aparezcan el objeto jsonb
+    public static Jsonb createJsonb()
+    {
         return JsonbBuilder.newBuilder()
                            .build();
     }

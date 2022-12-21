@@ -1,0 +1,44 @@
+[
+  {
+    "numRegistro": "37/000087",
+    "tipo": "HOSTAL",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "LA VIÑA",
+    "plazas": 86,
+    "discapacidad": "",
+    "direccion": "C/ SAN ROQUE, 19, BAJO",
+    "codPostal": "37210",
+    "provincia": "Salamanca",
+    "municipio": "Vitigudino",
+    "localidad": "VITIGUDINO",
+    "nucleo": "VITIGUDINO",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923500042"
+    ],
+    "email": "",
+    "web": "www.lavinavitigudino.com"
+  },
+  {
+    "numRegistro": "37/000132",
+    "tipo": "HOSTAL_RESIDENCIA",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "EL QUIJOTE",
+    "plazas": 30,
+    "discapacidad": "",
+    "direccion": "AVDA. SALAMANCA, 13",
+    "codPostal": "37210",
+    "provincia": "Salamanca",
+    "municipio": "Vitigudino",
+    "localidad": "VITIGUDINO",
+    "nucleo": "VITIGUDINO",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "626260876"
+    ],
+    "email": "hquijoteviti@hotmail.com",
+    "web": ""
+  }
+]
