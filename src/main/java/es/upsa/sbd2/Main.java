@@ -3,6 +3,8 @@ package es.upsa.sbd2;
 import es.upsa.sbd2.Alojamiento.Alojamiento;
 import es.upsa.sbd2.Alojamiento.AlojamientoJsonAdapter;
 import es.upsa.sbd2.Alojamiento.CsvParserAlojamientos;
+import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
+import es.upsa.sbd2.Enumeraciones.Provincia;
 import es.upsa.sbd2.Enumeraciones.TipoAlojamiento;
 import es.upsa.sbd2.Restaurante.CsvParserRestaurante;
 import es.upsa.sbd2.Restaurante.RestauranteJsonAdapter;
@@ -23,7 +25,6 @@ import java.util.function.Predicate;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        Data data= new Data();
         //<----------------------------------->//
         //              -*-Main-*-             //
         //<----------------------------------->//
@@ -45,37 +46,56 @@ public class Main {
         //      -*-Data y Predicates-*-        //
         //<----------------------------------->//
 
-        //Carga de datos de los alojamientos en memoria (Clase Data)
-        data.loadAlojamientos(alojamientosjsonFile);
-        data.loadRestaurantes(restaurantesjsonFile);
+        //
+        // Carga los alojamientos
+        //
+                Data data = new Data();
+                File alojamientosFile = new File("alojamientos.json");
+                File restaurantesFile = new File("restaurantes.json");
+                data.loadAlojamientos(alojamientosFile);
+                data.loadRestaurantes(restaurantesFile);
+        //
+        // Crea un fichero con los alojamientos ubicados en el código postal 37001
+        //
+                File file2 = new File("alojamientosByCodigoPostal37001.json");
+                data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001"), file2);
+        //
+        // Crea un fichero con los alojamientos ubicados en el código postal 37001 que disponen de una capacidad mayor
+        // que 20 plazas
+        //
+                File file3 = new File("alojamientosByCodigoPostal37001AndPlazas20.json");
+                data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001")
+                                                .and( Predicates.alojamientosByPlazas(20) ), file3);
+        //
+        //Crea un fichero con los alojamientos pertenecientes a los códigos postales 37700 o 37210 
+        // y que no sean accesibles para minusválidos
+        //
+                File file1 = new File("AlojamientosByLocalidadBejarOrVitigudinoAndNotAccesible.json");
+                data.saveAlojamientos(Predicates.alojamientosByLocalidad("vitigudino")
+                                                .or(Predicates.alojamientosByLocalidad("bejar"))
+                                                .and(Predicates.alojamientosByAccesibilidadMinusvalidos().negate()), file1);
 
-        //Creacion de los ficheros y llamada a la funcion saveAlojamiento
-        File file1 = new File("AlojamientosByCodigoPostal37001AndTipoHostal.json");
-        //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001")
-        //                                .and(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL)), file1);
+        //
+        // Crea un fichero con todos los alojamientos
+        //
+                File file4 = new File("allAlojamientos.json");
+                data.saveAlojamientos(Predicates.allAlojamientos(), file4);
 
-        File file5 = new File("AlojamientosByCodigoPostal37001.json");
-        //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001"), file5);
+        //
+        // Selecciona los restaurantes ubicados en la provincia de Salamanca
+        //
+                List<Restaurante> list1= data.filterRestaurantes( Predicates.restaurantesByProvincia(Provincia.SALAMANCA) );
+        //
+        // Selecciona los restaurantes ubicados de lujo que dispongan de al menos 20 plazas
+        //
+                List<Restaurante> list2 = data.filterRestaurantes(Predicates.restaurantesByCategoria(CategoriaRestaurante.LUJO)
+                                                                            .and( Predicates.restaurantesByPlazas(20) ));
 
-        File file2 = new File("AlojamientosByAccTrue.json");
-        data.saveAlojamientos(Predicates.alojamientosByAccesibilidadMinusvalidos(), file2);
-
-        File file3 = new File("AlojamientosByCodigoPostal37210.json");
-        //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37210"),file3);
-
-        //Creacion de la lista y llamada a la funcion filterRestaurantes
-        //List<Restaurante> restaurantesByLocalidadBejar = data.filterRestaurantes(Predicates.restaurantesByLocalidad("bejar"));
-        //restaurantesByLocalidadBejar.forEach(System.out::println);
-        // for (Restaurante rest: restaurantesByLocalidadBejar)
-        // {
-        //   System.out.println(rest.getNombre() + "\t" + rest.getLocalidad());
-        // }
-
-        //List<Restaurante> restaurantesByLocalidadVitigudino = data.filterRestaurantes(Predicates.restaurantesByLocalidad("vitigudino"));
-        //restaurantesByLocalidadVitigudino.forEach(System.out::println);
-
-        File file4 = new File("AlojamientosWithRestByCodigoPostal37700.json");
-        //data.saveAlojamientosWithRestaurantes(Predicates.alojamientosByCodigoPostal("37700"), file4);
+        //
+        // Selecciona los alojamientos del tipo Hostal Residencia y muestra sus restaurantes relacionados
+        //
+        File file5 = new File("AlojamientosWithRestByTipoHostalResidencia.json");
+        data.saveAlojamientosWithRestaurantes(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL_RESIDENCIA), file5);
 
     }
 
