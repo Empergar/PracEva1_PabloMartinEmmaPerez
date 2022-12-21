@@ -1,0 +1,212 @@
+[
+  {
+    "nregistro": "37/000001",
+    "tipo": "HOTEL",
+    "categoria": "3ª - 3 estrellas",
+    "nombre": "COLON",
+    "plazas": 140,
+    "discapacidad": false,
+    "direccion": "COLON, 46",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "40,385422",
+    "latitud": "-5,765706",
+    "telefonos": [
+      "923400650"
+    ],
+    "email": "reservas@hotelcolonbejar.com",
+    "web": "www.hotelcolonbejar.com"
+  },
+  {
+    "nregistro": "37/000087",
+    "tipo": "HOSTAL",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "LA VIÑA",
+    "plazas": 86,
+    "discapacidad": false,
+    "direccion": "C/ SAN ROQUE, 19, BAJO",
+    "cpostal": "37210",
+    "provincia": "Salamanca",
+    "municipio": "Vitigudino",
+    "localidad": "VITIGUDINO",
+    "nucleo": "VITIGUDINO",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923500042"
+    ],
+    "email": "",
+    "web": "www.lavinavitigudino.com"
+  },
+  {
+    "nregistro": "37/000132",
+    "tipo": "HOSTAL_RESIDENCIA",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "EL QUIJOTE",
+    "plazas": 30,
+    "discapacidad": false,
+    "direccion": "AVDA. SALAMANCA, 13",
+    "cpostal": "37210",
+    "provincia": "Salamanca",
+    "municipio": "Vitigudino",
+    "localidad": "VITIGUDINO",
+    "nucleo": "VITIGUDINO",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "626260876"
+    ],
+    "email": "hquijoteviti@hotmail.com",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000183",
+    "tipo": "HOSTAL_RESIDENCIA",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "ARGENTINO",
+    "plazas": 26,
+    "discapacidad": false,
+    "direccion": "Travesía RECREO, S/N",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "40,389233",
+    "latitud": "-5,751669",
+    "telefonos": [
+      "923402364"
+    ],
+    "email": "",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000232",
+    "tipo": "HOSTAL",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "HOSTAL GIBRALEÓN",
+    "plazas": 57,
+    "discapacidad": false,
+    "direccion": "Calle GIBRALEON 2",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "0000",
+      "669158076"
+    ],
+    "email": "turnatbejar@gmail.com",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000234",
+    "tipo": "HOSTAL_RESIDENCIA",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "LA OTRA CASA",
+    "plazas": 11,
+    "discapacidad": false,
+    "direccion": "Travesía ZUÑIGA RODRIGUEZ, 15",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923410851"
+    ],
+    "email": "laotracasa@telefonica.com",
+    "web": "www.laotracasacafebar.com"
+  },
+  {
+    "nregistro": "37/000244",
+    "tipo": "PENSION",
+    "categoria": "no especificado",
+    "nombre": "DON SANCHO",
+    "plazas": 23,
+    "discapacidad": false,
+    "direccion": "Calle GIBRALEON,1",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [],
+    "email": "",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000261",
+    "tipo": "HOTEL",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "LOS DUQUES",
+    "plazas": 22,
+    "discapacidad": false,
+    "direccion": "CARRETERA DEL CASTAÑAR, 8",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923/40.13.17",
+      "923/40.31.11"
+    ],
+    "email": "",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000305",
+    "tipo": "HOSTAL",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "ANTIGUA POSADA",
+    "plazas": 10,
+    "discapacidad": false,
+    "direccion": "C/ VICTOR GORZO, 1",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "679236932"
+    ],
+    "email": "",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000401",
+    "tipo": "HOSTAL",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "EXTREMEÑO",
+    "plazas": 17,
+    "discapacidad": false,
+    "direccion": "Calle MANSILLA, 27",
+    "cpostal": "37700",
+    "provincia": "Salamanca",
+    "municipio": "Béjar",
+    "localidad": "BEJAR",
+    "nucleo": "BEJAR",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923402724"
+    ],
+    "email": "ancalzado@hotmail.com",
+    "web": ""
+  }
+]

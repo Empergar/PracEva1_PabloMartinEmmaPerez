@@ -1,0 +1,342 @@
+[
+  {
+    "nregistro": "37/000058",
+    "tipo": "PENSION",
+    "categoria": "no especificado",
+    "nombre": "ROOMIN HOSTEL",
+    "plazas": 26,
+    "discapacidad": false,
+    "direccion": "Calle CRISTO DE LOS MILAGROS 6  4º",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "628924622"
+    ],
+    "email": "roominhostel@gmail.com",
+    "web": "www.roominhostel.com"
+  },
+  {
+    "nregistro": "37/000125",
+    "tipo": "HOTEL_RESIDENCIA",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "GRAN VIA",
+    "plazas": 80,
+    "discapacidad": false,
+    "direccion": "Calle LA ROSA 4",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923215401"
+    ],
+    "email": "pantaleonhost@gmail.com",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000178",
+    "tipo": "HOTEL_RESIDENCIA",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "AMEFA",
+    "plazas": 59,
+    "discapacidad": false,
+    "direccion": "Calle POZO AMARILLO, 18-20",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923218189"
+    ],
+    "email": "reservas@hotelamefa.com",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000206",
+    "tipo": "HOTEL_RESIDENCIA",
+    "categoria": "1ª - 1 estrella",
+    "nombre": "LE PETIT HOTEL GIRARDI",
+    "plazas": 30,
+    "discapacidad": true,
+    "direccion": "RONDA DE SANCTI-SPIRITUS, 39",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923 600774",
+      "923 600773"
+    ],
+    "email": "",
+    "web": "www.lepetithotel.net"
+  },
+  {
+    "nregistro": "37/000207",
+    "tipo": "HOSTAL_RESIDENCIA",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "CUZCO",
+    "plazas": 30,
+    "discapacidad": false,
+    "direccion": "Calle OBISPO BARBADO VIEJO, 2-4",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923265745"
+    ],
+    "email": "info@hostalcuzcosalamanca.com",
+    "web": "www.hostalcuzco.net"
+  },
+  {
+    "nregistro": "37/000213",
+    "tipo": "RESIDECNIA_APARTAMENTO",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "EL TOBOSO",
+    "plazas": 39,
+    "discapacidad": false,
+    "direccion": "CLAVEL, 7",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "40,96515",
+    "latitud": "-5,662404",
+    "telefonos": [
+      "923271464"
+    ],
+    "email": "info@hoteltoboso.com",
+    "web": ""
+  },
+  {
+    "nregistro": "37/000224",
+    "tipo": "HOTEL_RESIDENCIA",
+    "categoria": "4ª - 4 estrellas",
+    "nombre": "EXE SALAMANCA",
+    "plazas": 120,
+    "discapacidad": true,
+    "direccion": "ALAVA, 8-14",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "40,963178",
+    "latitud": "-5,657931",
+    "telefonos": [
+      "923261111",
+      "923261111",
+      "615299582"
+    ],
+    "email": "reservas@exesalamanca.com",
+    "web": "www.exesalamanca.com"
+  },
+  {
+    "nregistro": "37/000296",
+    "tipo": "HOTEL",
+    "categoria": "4ª - 4 estrellas",
+    "nombre": "SOHO BOUTIQUE SALAMANCA",
+    "plazas": 41,
+    "discapacidad": true,
+    "direccion": "Plaza PLAZA DEL ANGEL, 5-7",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923993900"
+    ],
+    "email": "reservas@sohosalamanca.com",
+    "web": "www.sohosalamanca.com"
+  },
+  {
+    "nregistro": "37/000300",
+    "tipo": "HOTEL",
+    "categoria": "4ª - 4 estrellas",
+    "nombre": "EUROSTARS LAS CLARAS",
+    "plazas": 135,
+    "discapacidad": true,
+    "direccion": "C/ MARQUESA DE ALMARZA, S/N",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923128500"
+    ],
+    "email": "direccion@eurostarslasclaras.com",
+    "web": "www.eurostarslasclaras.com"
+  },
+  {
+    "nregistro": "37/000303",
+    "tipo": "HOTEL",
+    "categoria": "5ª - 5 estrellas",
+    "nombre": "HOSPES PALACIO DE SAN ESTEBAN",
+    "plazas": 97,
+    "discapacidad": true,
+    "direccion": "Calle ARROYO DE SANTO DOMINGO 3",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923262296"
+    ],
+    "email": "af.palaciosanesteban@hospes.com",
+    "web": "https://www.hospes.com/"
+  },
+  {
+    "nregistro": "37/000315",
+    "tipo": "HOTEL",
+    "categoria": "3ª - 3 estrellas",
+    "nombre": "TORRE DEL CLAVERO",
+    "plazas": 48,
+    "discapacidad": true,
+    "direccion": "CONSUELO,21",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923280410"
+    ],
+    "email": "info@hoteltorredelclavero.com",
+    "web": "www.hoteltorredelclavero.com"
+  },
+  {
+    "nregistro": "37/000319",
+    "tipo": "HOTEL_RESIDENCIA",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "IBIS SALAMANCA CENTRO",
+    "plazas": 118,
+    "discapacidad": true,
+    "direccion": "Calle LA MARINA 15-19",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "40,9640861",
+    "latitud": "-5,6576806",
+    "telefonos": [
+      "923272380",
+      "675263695"
+    ],
+    "email": "hotellamarina2015@gmail.com     /       primi19hotmail.es",
+    "web": "www.ibishotel.com"
+  },
+  {
+    "nregistro": "37/000321",
+    "tipo": "HOSTAL_RESIDENCIA",
+    "categoria": "2ª - 2 estrellas",
+    "nombre": "HOSTERIA CASA VALLEJO",
+    "plazas": 21,
+    "discapacidad": true,
+    "direccion": "SAN JUAN DE LA CRUZ, Nº 3",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "",
+    "nucleo": "SALAMANCA",
+    "longitud": "",
+    "latitud": "",
+    "telefonos": [
+      "923280421"
+    ],
+    "email": "info@hosteriacasavallejo.com",
+    "web": "www.hosteriacasavallejo.com"
+  },
+  {
+    "nregistro": "37/000350",
+    "tipo": "HOTEL",
+    "categoria": "4ª - 4 estrellas",
+    "nombre": "SOHO BOUTIQUE CANALEJAS",
+    "plazas": 84,
+    "discapacidad": true,
+    "direccion": "Calle EL GRILLO 18",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "40,963188",
+    "latitud": "-5,65915",
+    "telefonos": [
+      "923266033"
+    ],
+    "email": "sohocanalejas@sohohoteles.com",
+    "web": "www.sohohoteles.com"
+  },
+  {
+    "nregistro": "37/000360",
+    "tipo": "HOTEL_RESIDENCIA",
+    "categoria": "3ª - 3 estrellas",
+    "nombre": "IKONIK PLAZA MERCADO",
+    "plazas": 70,
+    "discapacidad": true,
+    "direccion": "Plaza DEL MERCADO 16",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "40,9644444",
+    "latitud": "-5,6627778",
+    "telefonos": [
+      "923272250"
+    ],
+    "email": "",
+    "web": "www.exeplazamercado.com"
+  },
+  {
+    "nregistro": "37/000420",
+    "tipo": "HOTEL",
+    "categoria": "3ª - 3 estrellas",
+    "nombre": "HOTEL MERCADO",
+    "plazas": 72,
+    "discapacidad": false,
+    "direccion": "Calle SAN JUAN DE LA CRUZ 7",
+    "cpostal": "37001",
+    "provincia": "Salamanca",
+    "municipio": "Salamanca",
+    "localidad": "SALAMANCA",
+    "nucleo": "SALAMANCA",
+    "longitud": "40,9639443",
+    "latitud": "-5,6654854",
+    "telefonos": [
+      "923177163"
+    ],
+    "email": "DAVID@CERBERU.COM",
+    "web": "WWW.GAIAROOMS.COM"
+  }
+]
