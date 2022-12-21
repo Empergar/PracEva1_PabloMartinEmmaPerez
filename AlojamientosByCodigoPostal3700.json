@@ -16,7 +16,7 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923400650"
+      "\"923400650\""
     ],
     "web": "www.hotelcolonbejar.com"
   },
@@ -37,8 +37,8 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923402400",
-      "654334103"
+      "\"923402400\"",
+      "\"654334103\""
     ],
     "web": "www.hostalblazquez.com"
   },
@@ -59,7 +59,7 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923402364"
+      "\"923402364\""
     ],
     "web": ""
   },
@@ -80,8 +80,8 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "0000",
-      "669158076"
+      "\"0000\"",
+      "\"669158076\""
     ],
     "web": ""
   },
@@ -102,7 +102,7 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923410851"
+      "\"923410851\""
     ],
     "web": "www.laotracasacafebar.com"
   },
@@ -142,8 +142,8 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923/40.13.17",
-      "923/40.31.11"
+      "\"923/40.13.17\"",
+      "\"923/40.31.11\""
     ],
     "web": ""
   },
@@ -164,7 +164,7 @@
     "nucleo": "PALOMARES",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923403313"
+      "\"923403313\""
     ],
     "web": ""
   },
@@ -185,7 +185,7 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "679236932"
+      "\"679236932\""
     ],
     "web": ""
   },
@@ -206,8 +206,8 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923408494",
-      "923411151"
+      "\"923408494\"",
+      "\"923411151\""
     ],
     "web": "www.hospederiarealdebejar.com"
   },
@@ -228,7 +228,7 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923402724"
+      "\"923402724\""
     ],
     "web": ""
   },
@@ -249,8 +249,8 @@
     "nucleo": "BEJAR",
     "provincia": "SALAMANCA",
     "telefonos": [
-      "923403118",
-      "605806061"
+      "\"923403118\"",
+      "\"605806061\""
     ],
     "web": "www.hotelcasabeletri.com"
   }

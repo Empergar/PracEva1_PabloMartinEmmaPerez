@@ -1,1 +1,23 @@
-[{"numRegistro":"37/000410","tipo":"HOSTAL","categoria":"PRIMERA","nombre":"I DREAM SALAMANCA","plazas":18,"discapacidad":"","codPostal":"37001","direccion":"Paseo CANALEJAS 14 1","email":"","latitud":"-5,658306","localidad":"SALAMANCA","longitud":"40,967608","municipio":"Salamanca","nucleo":"SALAMANCA","provincia":"SALAMANCA","telefonos":["691663519"],"web":"www.idreamhostal.com"}]
+[
+  {
+    "numRegistro": "37/000410",
+    "tipo": "HOSTAL",
+    "categoria": "PRIMERA",
+    "nombre": "I DREAM SALAMANCA",
+    "plazas": 18,
+    "discapacidad": "",
+    "codPostal": "37001",
+    "direccion": "Paseo CANALEJAS 14 1",
+    "email": "",
+    "latitud": "-5,658306",
+    "localidad": "SALAMANCA",
+    "longitud": "40,967608",
+    "municipio": "Salamanca",
+    "nucleo": "SALAMANCA",
+    "provincia": "SALAMANCA",
+    "telefonos": [
+      "\"691663519\""
+    ],
+    "web": "www.idreamhostal.com"
+  }
+]

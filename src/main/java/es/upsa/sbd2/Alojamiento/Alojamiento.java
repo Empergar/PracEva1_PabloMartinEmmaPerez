@@ -25,6 +25,7 @@ public class Alojamiento
                                  @JsonbProperty("tipo") String tipo,
                                  @JsonbProperty("categoria") String categoria,
                                  @JsonbProperty("nombre") String nombre,
+                                 @JsonbProperty("plazas") Integer plazas,
                                  @JsonbProperty("discapacidad") Boolean discapacidad,
                                  @JsonbProperty("ubicacion") JsonObject ubicacion,
                                  @JsonbProperty("contactos") JsonObject contactos)
@@ -42,6 +43,7 @@ public class Alojamiento
                 .withTipo(TipoAlojamiento.getTipoAlojamiento(tipo))
                 .withCategoria(CategoriaAlojamiento.getCategoriaAlojamiento(categoria))
                 .withNombre(nombre)
+                .withPlazas(plazas)
                 .withAccMinusvalidos(accMinusvalidos)
                 .withDireccion(ubicacion.getString("direccion"))
                 .withCodPostal(ubicacion.getString("codPostal"))
