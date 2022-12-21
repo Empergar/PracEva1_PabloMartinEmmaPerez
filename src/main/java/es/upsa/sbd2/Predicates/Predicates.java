@@ -1,4 +1,4 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.Predicates;
 
 import es.upsa.sbd2.Alojamiento.Alojamiento;
 import es.upsa.sbd2.Enumeraciones.CategoriaAlojamiento;

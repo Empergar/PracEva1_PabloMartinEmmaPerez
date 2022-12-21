@@ -1,4 +1,4 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.Predicates;
 
 import java.util.function.Predicate;
 

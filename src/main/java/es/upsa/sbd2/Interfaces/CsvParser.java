@@ -1,4 +1,4 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.Interfaces;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,8 @@
 package es.upsa.sbd2.Restaurante;
 
-import es.upsa.sbd2.CsvParser;
+import es.upsa.sbd2.Interfaces.CsvParser;
 import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
 import es.upsa.sbd2.Enumeraciones.Provincia;
-import es.upsa.sbd2.Restaurante.Restaurante;
 
 import java.util.List;
 

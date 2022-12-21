@@ -1,8 +1,8 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.TelefonoAdapter;
 
+import es.upsa.sbd2.Interfaces.JsonAdapter;
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
-import jakarta.json.JsonObject;
 import jakarta.json.JsonValue;
 
 import java.util.List;

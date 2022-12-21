@@ -1,6 +1,6 @@
 package es.upsa.sbd2.Enumeraciones;
 
-import es.upsa.sbd2.DataNotValidException;
+import es.upsa.sbd2.Exceptions.DataNotValidException;
 
 public enum TipoAlojamiento {
     HOSTAL("Hostal"), HOSTAL_RESIDENCIA("Hostal Residencia"),

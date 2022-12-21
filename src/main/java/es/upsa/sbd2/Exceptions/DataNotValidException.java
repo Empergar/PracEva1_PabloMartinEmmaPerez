@@ -1,4 +1,4 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.Exceptions;
 
 
 public class DataNotValidException extends RuntimeException{

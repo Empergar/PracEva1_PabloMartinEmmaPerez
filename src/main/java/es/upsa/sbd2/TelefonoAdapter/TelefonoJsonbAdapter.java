@@ -1,4 +1,4 @@
-package es.upsa.sbd2;
+package es.upsa.sbd2.TelefonoAdapter;
 
 import jakarta.json.JsonArray;
 import jakarta.json.JsonValue;

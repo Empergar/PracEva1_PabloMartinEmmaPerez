@@ -1,7 +1,7 @@
 package es.upsa.sbd2.Alojamiento;
 
-import es.upsa.sbd2.JsonAdapter;
-import es.upsa.sbd2.TelefonoJsonAdapter;
+import es.upsa.sbd2.Interfaces.JsonAdapter;
+import es.upsa.sbd2.TelefonoAdapter.TelefonoJsonAdapter;
 import jakarta.json.Json;
 import jakarta.json.JsonValue;
 

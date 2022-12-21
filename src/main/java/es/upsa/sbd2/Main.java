@@ -6,15 +6,15 @@ import es.upsa.sbd2.Alojamiento.CsvParserAlojamientos;
 import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
 import es.upsa.sbd2.Enumeraciones.Provincia;
 import es.upsa.sbd2.Enumeraciones.TipoAlojamiento;
+import es.upsa.sbd2.Interfaces.JsonAdapter;
+import es.upsa.sbd2.Predicates.Predicates;
 import es.upsa.sbd2.Restaurante.CsvParserRestaurante;
 import es.upsa.sbd2.Restaurante.RestauranteJsonAdapter;
 import es.upsa.sbd2.Restaurante.Restaurante;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 //<----------------------------------->//
 //    -*-Pablo Martin Sanchez-*-       //

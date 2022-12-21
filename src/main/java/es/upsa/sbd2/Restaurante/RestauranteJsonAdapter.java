@@ -1,12 +1,8 @@
 package es.upsa.sbd2.Restaurante;
 
-import es.upsa.sbd2.Enumeraciones.CategoriaRestaurante;
-import es.upsa.sbd2.Enumeraciones.Provincia;
-import es.upsa.sbd2.JsonAdapter;
-import es.upsa.sbd2.TelefonoJsonAdapter;
-import es.upsa.sbd2.TelefonoJsonbAdapter;
+import es.upsa.sbd2.Interfaces.JsonAdapter;
+import es.upsa.sbd2.TelefonoAdapter.TelefonoJsonAdapter;
 import jakarta.json.*;
-import jakarta.json.bind.adapter.JsonbAdapter;
 
 import java.util.List;
 

@@ -2,6 +2,7 @@ package es.upsa.sbd2;
 
 import es.upsa.sbd2.Alojamiento.Alojamiento;
 import es.upsa.sbd2.AlojamientosWithRestaurantes.AlojamientosWithRestaurantes;
+import es.upsa.sbd2.Predicates.Predicates;
 import es.upsa.sbd2.Restaurante.Restaurante;
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;

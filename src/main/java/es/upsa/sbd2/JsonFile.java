@@ -1,5 +1,6 @@
 package es.upsa.sbd2;
 
+import es.upsa.sbd2.Interfaces.JsonAdapter;
 import jakarta.json.Json;
 import jakarta.json.JsonWriter;
 

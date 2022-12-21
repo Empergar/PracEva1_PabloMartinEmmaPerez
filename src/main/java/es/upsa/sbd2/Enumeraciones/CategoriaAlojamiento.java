@@ -1,6 +1,6 @@
 package es.upsa.sbd2.Enumeraciones;
 
-import es.upsa.sbd2.DataNotValidException;
+import es.upsa.sbd2.Exceptions.DataNotValidException;
 
 public enum CategoriaAlojamiento {
     PRIMERA("1ª - 1 estrella"), SEGUNDA("2ª - 2 estrellas"),

@@ -1,5 +1,5 @@
 package es.upsa.sbd2.Alojamiento;
-import es.upsa.sbd2.CsvParser;
+import es.upsa.sbd2.Interfaces.CsvParser;
 import es.upsa.sbd2.Enumeraciones.CategoriaAlojamiento;
 import es.upsa.sbd2.Enumeraciones.Provincia;
 import es.upsa.sbd2.Enumeraciones.TipoAlojamiento;
