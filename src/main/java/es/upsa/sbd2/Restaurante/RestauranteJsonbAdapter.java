@@ -44,4 +44,5 @@ public class RestauranteJsonbAdapter implements JsonbAdapter<Restaurante, JsonOb
                 .withWeb(jsonObject.getJsonObject("contacto").getString("web"))
                 .build();
     }
+
 }

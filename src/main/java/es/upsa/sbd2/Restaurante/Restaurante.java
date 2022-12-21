@@ -50,4 +50,12 @@ public class Restaurante
     private String accMinusvalidos;
     private String posicion;
 
+    public String getCategoria() {
+        return categoria.getCategoriaRestauranteString();
+    }
+
+    public String getProvincia() {
+        return provincia.getProvinciaString();
+    }
+
 }
