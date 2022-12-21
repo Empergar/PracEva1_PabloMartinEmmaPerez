@@ -44,7 +44,6 @@ public class CsvParserAlojamientos implements CsvParser<Alojamiento> {
     public String[] controlarEmailsDobles(String[] tokens)
     {
         if (!tokens[22].isEmpty()){
-            System.out.println(tokens[14] + " " + tokens[15]);
             tokens[14] = tokens[14] + " " + tokens[15];
             for (int i = 16; i < tokens.length; i++)
             {
