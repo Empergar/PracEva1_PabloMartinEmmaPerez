@@ -38,7 +38,7 @@ public class Predicates {
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si un alojamiento está ubicado en una determinada localidad.
     public static Predicate<Alojamiento> alojamientosByLocalidad(String localidad){
-        return alojamiento -> alojamiento.getLocalidad().equals(localidad);
+        return alojamiento -> alojamiento.getLocalidad().toLowerCase().equals(localidad.toLowerCase());
     }
 
     //Crea y devuelve un Predicate<Alojamiento> que verifica si el alojamiento tiene accesibilildad para minusválidos.
@@ -58,7 +58,7 @@ public class Predicates {
 
     //Crea y devuelve un Predicate<Restaurante> que verifica si un restaurante está ubicado en una determinada localidad
     public static Predicate<Restaurante> restaurantesByLocalidad(String localidad){
-        return restaurante -> restaurante.getLocalidad().equals(localidad);
+        return restaurante -> restaurante.getLocalidad().toLowerCase().equals(localidad.toLowerCase());
     }
 
     //Crea y devuelve un Predicate<Restaurante> que verifica si un restaurante lo es de una determinada Categoría

@@ -6,7 +6,7 @@ public enum CategoriaRestaurante {
 
     LUJO("lujo - 5 tenedores"), PRIMERA("1ª - 4 tenedores"),
     SEGUNDA("2ª - 3 tenedores"), TERCERA("3ª - 2 tenedores"),
-    CUARTA("4ª - 1 tenedor"), NO_ESPECIFICADO("no especificado");
+    CUARTA("4ª - 1 tenedor"), UNSPECIFIED("no especificado");
 
     private final String categoriaRestaurante;
 
@@ -25,7 +25,7 @@ public enum CategoriaRestaurante {
         //Se comprueba si el campo al ser opcional puede estar vacio
         if (categoria.equals(""))
         {
-            return CategoriaRestaurante.NO_ESPECIFICADO;
+            return CategoriaRestaurante.UNSPECIFIED;
         }
 
         //Se comprueba si recorriendo la enumeracion...

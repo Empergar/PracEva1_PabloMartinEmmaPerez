@@ -3,13 +3,16 @@ package es.upsa.sbd2;
 import es.upsa.sbd2.Alojamiento.Alojamiento;
 import es.upsa.sbd2.Alojamiento.AlojamientoJsonAdapter;
 import es.upsa.sbd2.Alojamiento.CsvParserAlojamientos;
+import es.upsa.sbd2.Enumeraciones.TipoAlojamiento;
 import es.upsa.sbd2.Restaurante.CsvParserRestaurante;
 import es.upsa.sbd2.Restaurante.RestauranteJsonAdapter;
 import es.upsa.sbd2.Restaurante.Restaurante;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 //<----------------------------------->//
 //    -*-Pablo Martin Sanchez-*-       //
@@ -34,6 +37,18 @@ public class Main {
         createRestaurantesJson(restaurantesjsonFile, csvFile2);
 
         data.loadAlojamientos(alojamientosjsonFile);
+        data.loadRestaurantes(restaurantesjsonFile);
+        File file1 = new File("AlojamientosByCodigoPostal37001AndTipoHostal.json");
+        File file2 = new File("AlojamientosByCodigoPostal37700.json");
+        data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001")
+                                        .and(Predicates.alojamientosByTipo(TipoAlojamiento.HOSTAL)), file1);
+        data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37700"), file2);
+        List<Restaurante> restaurantesByLocalidadBejar = data.filterRestaurantes(Predicates.restaurantesByLocalidad("bejar"));
+        //restaurantesByLocalidadBejar.forEach(System.out::println);
+        for (Restaurante rest: restaurantesByLocalidadBejar)
+        {
+            System.out.println(rest.getNombre() + "\t" + rest.getLocalidad());
+        }
     }
 
     //Obtener fichero Json de alojamientos

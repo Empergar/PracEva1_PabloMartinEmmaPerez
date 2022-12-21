@@ -3,7 +3,10 @@ package es.upsa.sbd2.Restaurante;
 import es.upsa.sbd2.JsonAdapter;
 import es.upsa.sbd2.TelefonoJsonAdapter;
 import jakarta.json.Json;
+import jakarta.json.JsonArray;
 import jakarta.json.JsonValue;
+
+import java.util.List;
 
 public class RestauranteJsonAdapter implements JsonAdapter<Restaurante>
 {
@@ -20,10 +23,10 @@ public class RestauranteJsonAdapter implements JsonAdapter<Restaurante>
                 .add("categoria", data.getCategoria().getCategoriaRestauranteString())
                 .add("nombre", data.getNombre())
                 .add("plazas", data.getPlazas())
-                .add("discapacidad", data.getAccesible().equals("Si"))
+                .add("discapacidad", data.getAccMinusvalidos().equals("Si"))
                 .add("ubicacion", Json.createObjectBuilder()
                                          .add("direccion", data.getDireccion())
-                                         .add("cp", data.getCp())
+                                         .add("codPostal", data.getCodPostal())
                                          .add("provincia", data.getProvincia().getProvinciaString())
                                          .add("municipio", data.getMunicipio())
                                          .add("localidad", data.getLocalidad())
@@ -41,4 +44,11 @@ public class RestauranteJsonAdapter implements JsonAdapter<Restaurante>
 
 
     }
+
+    /*
+    @Override
+    public JsonArray toJsonArray(List<Restaurante> data) {
+        return JsonAdapter.super.toJsonArray(data);
+    }
+     */
 }
