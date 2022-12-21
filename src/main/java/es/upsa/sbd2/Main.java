@@ -57,15 +57,15 @@ public class Main {
         File file5 = new File("AlojamientosByCodigoPostal37001.json");
         data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37001"), file5);
 
-        File file2 = new File("AlojamientosByCodigoPostal37700.json");
-        //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37700"), file2);
+        File file2 = new File("AlojamientosByAccTrue.json");
+        data.saveAlojamientos(Predicates.alojamientosByAccesibilidadMinusvalidos(), file2);
 
         File file3 = new File("AlojamientosByCodigoPostal37210.json");
         //data.saveAlojamientos(Predicates.alojamientosByCodigoPostal("37210"),file3);
 
         //Creacion de la lista y llamada a la funcion filterRestaurantes
-        List<Restaurante> restaurantesByLocalidadBejar = data.filterRestaurantes(Predicates.restaurantesByLocalidad("bejar"));
-        restaurantesByLocalidadBejar.forEach(System.out::println);
+        //List<Restaurante> restaurantesByLocalidadBejar = data.filterRestaurantes(Predicates.restaurantesByLocalidad("bejar"));
+        //restaurantesByLocalidadBejar.forEach(System.out::println);
         // for (Restaurante rest: restaurantesByLocalidadBejar)
         // {
         //   System.out.println(rest.getNombre() + "\t" + rest.getLocalidad());

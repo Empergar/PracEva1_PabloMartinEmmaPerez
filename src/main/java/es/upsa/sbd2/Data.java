@@ -30,6 +30,7 @@ public class Data
             BufferedReader br = new BufferedReader(fr)){
             alojamientos = jsonb.fromJson(br, new ArrayList<Alojamiento>() {}.getClass().getGenericSuperclass());
         }
+        alojamientos.forEach(System.out::println);
     }
 
     //<-------------------------------------------------------------->//
